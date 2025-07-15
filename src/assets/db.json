@@ -1,234 +1,473 @@
 {
   "objects": [
     {
-      "id": "a1b2",
-      "categoryId": "a191",
-      "name": "MediaMarkt",
-      "desc": "Your go-to spot for the latest in electronics and appliances"
+      "id": "ofc",
+      "categoryId": "office",
+      "name": "Offices",
+      "desc": "Faculty Office",
+      "floor": "floor3"
     },
     {
-      "id": "b2c3",
-      "categoryId": "e928",
-      "name": "KFC",
-      "desc": "A perfect place for enjoying crispy fried chicken and sides"
+      "id": "libAdmin",
+      "categoryId": "resource",
+      "name": "Library Administration",
+      "desc": "TBA",
+      "floor": "floor3"
     },
     {
-      "id": "c3d4",
-      "categoryId": "e928",
-      "name": "McDonald's",
-      "desc": "Classic fast-food chain for burgers, fries, and quick meals"
+      "id": "specialCollections",
+      "categoryId": "resource",
+      "name": "Special Collections",
+      "desc": "Includes the Union College Archives, special book collections, manuscripts, and other primary source materials which document the College's history and support and extend its curriculum. The mission of Special Collections is to collect these materials, preserve them, and make them available to anyone with a valid need to use them. Schedule an appointment on their website or via email!",
+      "floor": "floor3"
     },
     {
-      "id": "d4e5",
-      "categoryId": "d21e",
-      "name": "Rolex",
-      "desc": "Swiss luxury watches for discerning customers"
+      "id": "processingAndDigitization",
+      "categoryId": "office",
+      "name": "Processing and Digitization",
+      "desc": "TBA",
+      "floor": "floor3"
     },
     {
-      "id": "e5f6",
-      "categoryId": "d21e",
-      "name": "Louis Vuitton",
-      "desc": "High-end bags, luggage, and accessories"
+      "id": "quietStudyf3",
+      "categoryId": "study space",
+      "name": "Quiet Study Floor 3",
+      "desc": "No conversations or cell phone conversations",
+      "floor": "floor3"
     },
     {
-      "id": "f6g7",
-      "categoryId": "d21e",
-      "name": "Gucci",
-      "desc": " Italian luxury fashion for trendsetters"
+      "id": "restroomf3",
+      "categoryId": "restrooms",
+      "name": "Restrooms Floor 3",
+      "desc": "Gender Separated Bathrooms",
+      "floor": "floor3"
+    },
+
+    {
+      "id": "ofc202",
+      "categoryId": "office",
+      "name": "Office 202",
+      "desc": "Faculty Office",
+      "floor": "floor2"
     },
     {
-      "id": "g7h8",
-      "categoryId": "d21e",
-      "name": "Chanel",
-      "desc": "Iconic fashion, fragrance, and accessory collections"
+      "id": "writingCenter",
+      "categoryId": "resource",
+      "name": "Writing Center",
+      "desc": "Helps any student with any writing assignment; have student tutors who specialize in different areas of writing. Book an appointment online!",
+      "floor": "floor2"
     },
     {
-      "id": "h8i9",
-      "categoryId": "87b0",
-      "name": "Levi's",
-      "desc": "he classic American denim and casual wear"
+      "id": "PBK",
+      "name": "Phi Beta Kappa (PBK) Room",
+      "desc": "Used for classes held in the library or other meetings",
+      "floor": "floor2"
     },
     {
-      "id": "i9j0",
-      "categoryId": "58a9",
-      "name": "Mall Office",
-      "desc": "For all your mall inquiries and services"
+      "id": "acomServ",
+      "categoryId": "resource",
+      "name": "Accommodative Services",
+      "desc": "Aids students with accommodations for testing and classes; schedule an appointment or reach out via email!",
+      "floor": "floor2"
     },
     {
-      "id": "j0k1",
-      "categoryId": "87b0",
-      "name": "Zara",
-      "desc": "Latest trends in apparel and accessories"
+      "id": "openCollab",
+      "categoryId": "study space",
+      "name": "Open Collaboration Floor 2",
+      "desc": "Conversations allowed, short cell phone conversations",
+      "floor": "floor2"
     },
     {
-      "id": "k1l2",
-      "categoryId": "a191",
-      "name": "McShark",
-      "desc": "Specializing in Apple products and accessories"
+      "id": "UCPC",
+      "categoryId": "resource",
+      "name": "Permanent Collection",
+      "desc": "Houses Union's art collection and other materials",
+      "floor": "floor2"
     },
     {
-      "id": "l2m3",
-      "categoryId": "87b0",
-      "name": "Nike",
-      "desc": "Global leader in athletic footwear, apparel, and equipmen"
+      "id": "learningLab",
+      "categoryId": "study space",
+      "name": "Learning Lab",
+      "desc": "Open study space as long as no meetings are being held; has desktop computers and large TVs to display content",
+      "floor": "floor2"
     },
     {
-      "id": "m3n4",
-      "categoryId": "87b0",
-      "name": "Adidas",
-      "desc": "Athletic wear and performance gear"
+      "id": "engagingTechLab",
+      "categoryId": "resource",
+      "name": "Engaging Tech Lab",
+      "desc": "TBA",
+      "floor": "floor2"
     },
     {
-      "id": "n4o5",
-      "categoryId": "52f1",
-      "name": "Primark",
-      "desc": "Affordable fashion for the whole family"
+      "id": "restroomsf2",
+      "categoryId": "restrooms",
+      "name": "Restrooms Floor 2",
+      "desc": "Gender Separated Bathrooms",
+      "floor": "floor2"
     },
     {
-      "id": "p6q7",
-      "categoryId": "87b0",
-      "name": "H&M",
-      "desc": "Fashion and quality at the best price"
+      "id": "quietStudy2",
+      "categoryId": "study space",
+      "name": "Quiet Study Floor 2",
+      "desc": "No conversations or cell phone conversations",
+      "floor": "floor2"
     },
     {
-      "id": "q7r8",
-      "categoryId": "87b0",
-      "name": "Vans",
-      "desc": "Authentic skateboarding footwear and apparel"
+      "id": "groupStudyArea",
+      "categoryId": "study space",
+      "name": "Group Study Area",
+      "desc": "Light conversations, no cell phone conversations",
+      "floor": "floor2"
     },
     {
-      "id": "r8s9",
-      "categoryId": "e928",
-      "name": "Starbucks",
-      "desc": "Your favorite brews and snacks"
+      "id": "regStacks",
+      "categoryId": "stacks",
+      "name": "Stacks (A-D)",
+      "desc": "TBA",
+      "floor": "floor2"
     },
     {
-      "id": "s9t0",
-      "categoryId": "52f1",
-      "name": "7-Eleven",
-      "desc": "Convenience store for your needs"
+      "id": "oversizeStacks",
+      "categoryId": "stacks",
+      "name": "Stacks (Oversized)",
+      "desc": "TBA",
+      "floor": "floor2"
     },
     {
-      "id": "t0u1",
-      "categoryId": "87b0",
-      "name": "Victoria's Secret",
-      "desc": "Exquisite lingerie, sleepwear, and beauty products"
+      "id": "quietStudy2a",
+      "categoryId": "study space",
+      "name": "Additional Quiet Study Floor 2",
+      "desc": "No conversations or cell phone conversations",
+      "floor": "floor2"
     },
+
     {
-      "id": "u1v2",
-      "categoryId": "d21e",
-      "name": "Pandora",
-      "desc": "Customizable charm bracelets, rings, and more"
-    },
-    {
-      "id": "v2w3",
-      "categoryId": "87b0",
-      "name": "Foot Locker",
-      "desc": "The latest in athletic footwear and apparel"
-    },
-    {
-      "id": "w3x4",
-      "categoryId": "52f1",
-      "name": "Pharmacy",
-      "desc": "Prescription drugs, health products, and wellness advice"
-    },
-    {
-      "id": "x4y5",
-      "categoryId": "a191",
-      "name": "GameStop",
-      "desc": "Video games, consumer electronics, and gaming merchandise retailer"
-    },
-    {
-      "id": "y5z6",
-      "categoryId": "87b0",
-      "name": "Claire's",
-      "desc": "Accessories and jewelry for young girls and teenagers"
-    },
-    {
-      "id": "z6a7",
-      "categoryId": "52f1",
-      "name": "Tobacco Shop",
-      "desc": "Tobacco products and smoking accessories"
-    },
-    {
-      "id": "a7b8",
-      "categoryId": "52f1",
-      "name": "Sephora",
-      "desc": "Skincare, cosmetics, and fragrances"
-    },
-    {
-      "id": "b8c9",
-      "categoryId": "52f1",
-      "name": "PetSmart",
-      "desc": "Everything for your pet's needs, from food to grooming"
-    },
-    {
-      "id": "c9d0",
-      "categoryId": "58a9",
-      "name": "Barbershop",
-      "desc": "Classic and contemporary haircuts"
-    },
-    {
-      "id": "d9d0",
-      "categoryId": "d21e",
-      "name": "Svarovski",
-      "desc": "Fine crystal jewelry and accessories"
-    },
-    {
-      "id": "ab12",
-      "categoryId": "17b0",
-      "name": "East Wing Toilet",
-      "desc": ""
-    },
-    {
-      "id": "ac12",
-      "categoryId": "17b0",
-      "name": "North Wing Toilet",
-      "desc": ""
-    },
-    {
-      "id": "ac13",
-      "categoryId": "e753",
+      "id": "entrance",
       "name": "Entrance",
-      "desc": ""
+      "desc": "Main Entrance to Schaffer Library",
+      "floor": "floor1"
+    },
+    {
+      "id": "ofc105",
+      "categoryId": "office",
+      "name": "Office 105",
+      "desc": "Faculty Office",
+      "floor": "floor1"
+    },
+    {
+      "id": "ofc122",
+      "categoryId": "office",
+      "name": "Office 122",
+      "desc": "Faculty Office",
+      "floor": "floor1"
+    },
+    {
+      "id": "learningCommons",
+      "categoryId": "study space",
+      "name": "Learning Commons",
+      "desc": "Conversations allowed, short cell phone conversations",
+      "floor": "floor1"
+    },
+    {
+      "id": "newspapers",
+      "categoryId": "resource",
+      "name": "Newspapers",
+      "desc": "TBA",
+      "floor": "floor1"
+    },
+    {
+      "id": "libraryServDesk",
+      "categoryId": "resource",
+      "name": "Library Service Desk",
+      "desc": "TBA",
+      "floor": "floor1"
+    },
+    {
+      "id": "its",
+      "categoryId": "resource",
+      "name": "Information Technology Services (ITS)",
+      "desc": "TBA",
+      "floor": "floor1"
+    },
+    {
+      "id": "restroomf1",
+      "categoryId": "restrooms",
+      "name": "Restrooms Floor 1",
+      "desc": "Gender Neutral Bathrooms",
+      "floor": "floor1"
+    },
+    {
+      "id": "accessServ",
+      "categoryId": "office",
+      "name": "Access Services",
+      "desc": "TBA",
+      "floor": "floor1"
+    },
+    {
+      "id": "cdls",
+      "categoryId": "office",
+      "name": "Content & Digital Library Systems (CDLS)",
+      "desc": "TBA",
+      "floor": "floor1"
+    },
+    {
+      "id": "printers",
+      "categoryId": "resource",
+      "name": "Printers/Copiers",
+      "desc": "TBA",
+      "floor": "floor1"
+    },
+    {
+      "id": "bloomberg",
+      "categoryId": "resource",
+      "name": "Bloomberg",
+      "desc": "TBA",
+      "floor": "floor1"
+    },
+    {
+      "id": "currentReadingArea",
+      "categoryId": "resource",
+      "name": "Current Reading Area",
+      "desc": "TBA",
+      "floor": "floor1"
+    },
+    {
+      "id": "quietStudy1",
+      "categoryId": "study space",
+      "name": "Quiet Study Floor 1",
+      "desc": "No conversations or cell phone conversations",
+      "floor": "floor1"
+    },
+    {
+      "id": "refJX-Z",
+      "categoryId": "resource",
+      "name": "Reference JX-Z",
+      "desc": "TBA",
+      "floor": "floor1"
+    },
+    {
+      "id": "CDs",
+      "categoryId": "resource",
+      "name": "CDs",
+      "desc": "TBA",
+      "floor": "floor1"
+    },
+    {
+      "id": "lallyReadingRoom",
+      "categoryId": "study space",
+      "name": "Lally Reading Room",
+      "desc": "No conversations or cell phone conversations",
+      "floor": "floor1"
+    },
+    {
+      "id": "currentPeriodicals",
+      "categoryId": "periodicals",
+      "name": "Periodicals (Current)",
+      "desc": "TBA",
+      "floor": "floor1"
+    },
+    {
+      "id": "refA-JX",
+      "categoryId": "resource",
+      "name": "Reference A-JX",
+      "desc": "TBA",
+      "floor": "floor1"
+    },
+    {
+      "id": "atlases",
+      "categoryId": "resource",
+      "name": "Atlases",
+      "desc": "TBA",
+      "floor": "floor1"
+    },
+
+    {
+      "id": "ideaLab",
+      "categoryId": "study space",
+      "name": "Study Rooms",
+      "desc": "TBA",
+      "floor": "floor0"
+    },
+    {
+      "id": "law",
+      "categoryId": "stacks",
+      "name": "Stacks (K)",
+      "desc": "TBA",
+      "floor": "floor0"
+    },
+    {
+      "id": "poliSci",
+      "categoryId": "stacks",
+      "name": "Stacks (J)",
+      "desc": "TBA",
+      "floor": "floor0"
+    },
+    {
+      "id": "socialSci",
+      "categoryId": "stacks",
+      "name": "Stacks (H)",
+      "desc": "TBA",
+      "floor": "floor0"
+    },
+    {
+      "id": "geoAnthroRec",
+      "categoryId": "stacks",
+      "name": "Stacks (G)",
+      "desc": "TBA",
+      "floor": "floor0"
+    },
+    {
+      "id": "americaUS",
+      "categoryId": "stacks",
+      "name": "Stacks (E)",
+      "desc": "TBA",
+      "floor": "floor0"
+    },
+    {
+      "id": "americaOther",
+      "categoryId": "stacks",
+      "name": "Stacks (F)",
+      "desc": "TBA",
+      "floor": "floor0"
+    },
+    {
+      "id": "groupStudyRooms",
+      "categoryId": "study space",
+      "name": "Group Study Rooms",
+      "desc": "Open collaboration; conversations allowed, short cell phone conversations",
+      "floor": "floor0"
+    },
+    {
+      "id": "restroomf0",
+      "categoryId": "restrooms",
+      "name": "Restrooms Basement",
+      "desc": "Gender Neutral Bathrooms",
+      "floor": "floor0"
+    },
+    {
+      "id": "microformsAndPrinter",
+      "categoryId": "resource",
+      "name": "Microfilms & Microfilm Printer",
+      "desc": "TBA",
+      "floor": "floor0"
+    },
+    {
+      "id": "moreMicrofilms",
+      "categoryId": "resource",
+      "name": "More Microfilms",
+      "desc": "TBA",
+      "floor": "floor0"
+    },
+    {
+      "id": "LtoP",
+      "categoryId": "stacks",
+      "name": "Stacks (L-P)",
+      "desc": "TBA",
+      "floor": "floor0"
+    },
+    {
+      "id": "PtoQ",
+      "categoryId": "stacks",
+      "name": "Stacks (P-Q)",
+      "desc": "TBA",
+      "floor": "floor0"
+    },
+    {
+      "id": "QtoT",
+      "categoryId": "stacks",
+      "name": "Stacks (Q-T)",
+      "desc": "TBA",
+      "floor": "floor0"
+    },
+    {
+      "id": "TtoZ",
+      "categoryId": "stacks",
+      "name": "Stacks (T-Z)",
+      "desc": "TBA",
+      "floor": "floor0"
+    },
+    {
+      "id": "AtoI",
+      "categoryId": "periodicals",
+      "name": "Periodicals (A-I)",
+      "desc": "TBA",
+      "floor": "floor0"
+    },
+    {
+      "id": "JtoZ",
+      "categoryId": "periodicals",
+      "name": "Periodicals (J-Z)",
+      "desc": "TBA",
+      "floor": "floor0"
+    },
+    {
+      "id": "classifiedPeriodicals",
+      "categoryId": "periodicals",
+      "name": "Periodicals (Classified)",
+      "desc": "TBA",
+      "floor": "floor0"
+    },
+    {
+      "id": "oversizedPeriodicals",
+      "categoryId": "periodicals",
+      "name": "Periodicals (Oversized)",
+      "desc": "TBA",
+      "floor": "floor0"
+    },
+    {
+      "id": "govtDocs",
+      "categoryId": "resource",
+      "name": "Government Documents",
+      "desc": "TBA",
+      "floor": "floor0"
+    },
+    {
+      "id": "map",
+      "categoryId": "resource",
+      "name": "Map Collection",
+      "desc": "TBA",
+      "floor": "floor0"
+    },
+    {
+      "id": "dvd",
+      "categoryId": "resource",
+      "name": "DVD Collection",
+      "desc": "TBA",
+      "floor": "floor0"
+    },
+    {
+      "id": "quietStudy0",
+      "categoryId": "study space",
+      "name": "Quiet Study Basement",
+      "desc": "No conversations or cell phone conversations",
+      "floor": "floor0"
     }
   ],
+
   "categories": [
     {
-      "id": "52f1",
-      "name": "Retail"
+      "id": "office",
+      "name": "Offices"
     },
     {
-      "id": "e928",
-      "name": "Food"
+      "id": "resource",
+      "name": "Resources"
     },
     {
-      "id": "58a9",
-      "name": "Services"
+      "id": "stacks",
+      "name": "Stacks"
     },
     {
-      "id": "16be",
-      "name": "Health & Beauty"
+      "id": "periodicals",
+      "name": "Periodicals"
     },
     {
-      "id": "d21e",
-      "name": "Luxury Goods"
+      "id": "study space",
+      "name": "Study Spaces"
     },
     {
-      "id": "a191",
-      "name": "Electronics"
-    },
-    {
-      "id": "87b0",
-      "name": "Fashion"
-    },
-    {
-      "id": "17b0",
-      "name": "Sanitary"
-    },
-    {
-      "id": "e753",
-      "name": "Entrace"
+      "id": "restrooms",
+      "name": "Restrooms"
     }
   ]
 }

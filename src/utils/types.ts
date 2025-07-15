@@ -1,12 +1,12 @@
-
-
 export interface ObjectItem {
   id: string;
   name: string;
   desc: string;
   categoryId: string;
   categoryName?: string;
+  floor: "floor0" | "floor1" | "floor2" | "floor3"; // added
 }
+
 export interface Category {
   id: string;
   name: string;
@@ -21,6 +21,8 @@ export interface Beacon {
 export interface Navigation {
   start: string;
   end?: string;
+  floorPaths?: Record<string, string>;
+  avoidStairs?: boolean;
 }
 
 export interface NavigationContextType {

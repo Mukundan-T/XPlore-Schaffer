@@ -5,13 +5,20 @@ import { isDesktop } from "react-device-detect";
 import EditPositionButton from "./EditPositionButton";
 import DesktopRouteDetails from "./DesktopRouteDetails";
 import SearchBar from "./SearchBar";
+import DefaultPos from "./DefaultPos";
+import AvoidStairs from "./AvoidStairs";
 
 function Toolbar() {
   const { navigation } = useContext(NavigationContext) as NavigationContextType;
+
   return (
-    <div className="flex space-x-1 mb-4 h-12 relative">
+    <div className="flex space-x-2 mb-4 h-12 items-center relative">
       <SearchBar />
       <EditPositionButton />
+      <DefaultPos />
+      <div className="w-0.2" />  {/* Adds extra horizontal space */}
+      <AvoidStairs />
+
       {navigation.end && isDesktop && <DesktopRouteDetails />}
     </div>
   );

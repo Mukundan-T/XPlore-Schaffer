@@ -133,7 +133,7 @@ function SearchBar() {
   }
 
   return (
-    <div className="md:w-96 w-full flex flex-row">
+    <div className="md:w-80 w-full flex flex-row">
       <div className="flex flex-inline rounded w-full">
         <div className="h-12 w-12 center flex-none rounded-l bg-white text-blue-500 text-[8px] ">
           <div className="w-full h-8 center border-gray-300 border-r">

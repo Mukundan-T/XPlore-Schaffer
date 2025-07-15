@@ -51,7 +51,7 @@ export function useRouteDetails() {
   }, [navigation.end]);
 
   function handleLeave() {
-    resetEdges();
+    resetEdges(setNavigation);
     setNavigation((prevNavigation) => ({
       ...prevNavigation,
       end: "",

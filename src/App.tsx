@@ -13,7 +13,7 @@ function App() {
     <Suspense fallback={<Loading />}>
       <div className="flex flex-col relative w-full max-h-[100dvh]">
         <Routes>
-          <Route path="/:postion?" element={<Map />} />
+          <Route path="/:position?" element={<Map />} />
         </Routes>
         <ToastContainer position="bottom-left" closeOnClick autoClose={2500} />
         <Analytics />

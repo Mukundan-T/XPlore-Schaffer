@@ -1,4 +1,4 @@
-import logo from "../assets/img/pathpal-logo.svg";
+import logo from "../assets/img/Schaffer_logo.svg";
 import { FiChevronRight } from "react-icons/fi";
 import { useContext, useEffect, useState } from "react";
 import {
@@ -9,6 +9,10 @@ import {
 import { MapDataContext, NavigationContext } from "../pages/Map";
 
 import { navigateToObject } from "@/utils/navigationHelper";
+
+
+import { useFloor } from "@/context/FloorContext";
+
 
 interface ParsedObjects {
   [key: string]: {
@@ -24,6 +28,11 @@ function Sidebar() {
   const { objects } = useContext(MapDataContext) as MapDataContextType;
   const [parsedObjects, setParsedObjects] = useState<ParsedObjects>({});
   const [isRotating, setIsRotating] = useState(false);
+  
+  const { currentFloor, setCurrentFloor } = useFloor();
+  //const filteredObjects = objects.filter(obj => obj.floor === currentFloor);
+
+
   useEffect(() => {
     const groupedObjects = () => {
       const data: ParsedObjects = {};
@@ -60,7 +69,7 @@ function Sidebar() {
           rel="noreferrer"
           className="font-semibold text-blue-800 text-xs"
         >
-          <div className="flex items-center p-2 mb-4 text-blue-800 border border-blue-300 rounded-lg bg-blue-50">
+          {/* <div className="flex items-center p-2 mb-4 text-blue-800 border border-blue-300 rounded-lg bg-blue-50">
             <svg
               className="flex-shrink-0 inline w-4 h-4 me-2"
               aria-hidden="true"
@@ -71,10 +80,10 @@ function Sidebar() {
               <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5ZM9.5 4a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM12 15H8a1 1 0 0 1 0-2h1v-3H8a1 1 0 0 1 0-2h2a1 1 0 0 1 1 1v4h1a1 1 0 0 1 0 2Z" />
             </svg>
             Check out my new project OpenIndoorMaps
-          </div>
+          </div> */}
         </a>
         <div className="flex items-center flex-none mr-10">
-          <div className="rounded-md w-16 h-16 p-4 bg-gray-100 center">
+          <div className="rounded-md w-auto h-auto bg-gray-100 center">
             <img
               src={logo}
               alt="PathPal"
@@ -86,14 +95,32 @@ function Sidebar() {
           <div className="flex flex-col">
             <div className="flex flex-col">
               <p className="text-2xl font-semibold text-gray-900 pl-2">
-                PathPal
+                XPlore Schaffer
               </p>
-              <p className="text-sm font-semibold text-[#225EA9] pl-2">
+              {/* <p className="text-sm font-semibold text-[#225EA9] pl-2">
                 Indoor-Navigation
-              </p>
+              </p> */}
             </div>
           </div>
         </div>
+
+        <div className="my-4">
+          <label htmlFor="floor-select" className="text-sm font-medium text-gray-700">
+            Select Floor
+          </label>
+          <select
+            id="floor-select"
+            className="block w-full mt-1 border border-gray-300 rounded-md p-2"
+            value={currentFloor}
+            onChange={(e) => setCurrentFloor(e.target.value)}
+          >
+            <option value="floor0">Basement</option>
+            <option value="floor1">1st floor</option>
+            <option value="floor2">2nd floor</option>
+            <option value="floor3">3rd floor</option>
+          </select>
+        </div>
+
       </header>
       <div className="overflow-auto h-full">
         {Object.keys(parsedObjects)

@@ -14,6 +14,7 @@ import Controls from "./MapControls";
 import ObjectDetailsModal from "./Modals/ObjectDetailsModal";
 import { navigateToObject } from "@/utils/navigationHelper";
 import { toast } from "react-toastify";
+import { useFloor } from "@/context/FloorContext";
 
 function IndoorMapWrapper() {
   const [modalOpen, setModalOpen] = useState(false);
@@ -23,6 +24,9 @@ function IndoorMapWrapper() {
     NavigationContext
   ) as NavigationContextType;
   const { objects } = useContext(MapDataContext) as MapDataContextType;
+  const { currentFloor } = useFloor();
+  const floorObjects = objects.filter(obj => obj.floor === currentFloor);
+
   async function handleObjectClick(e: React.MouseEvent<SVGPathElement>) {
     if (!isEditMode) {
       const targetId = (e.target as HTMLElement).id;
@@ -69,9 +73,9 @@ function IndoorMapWrapper() {
             {/*Objects are the clickable areas on the map e.g. Rooms, Desks, ...*/}
             <Objects
               handleObjectClick={handleObjectClick}
-              className={
-                isEditMode ? "" : "hover:cursor-pointer hover:opacity-50"
-              }
+              className={isEditMode ? "" : "hover:cursor-pointer hover:opacity-50"}
+              currentFloor={currentFloor}
+              
             />
             {/*Edges are the lines on the map aka the paths*/}
             <Paths />

@@ -18,13 +18,15 @@ export const NavigationContext = createContext<NavigationContextType | null>(
 export const MapDataContext = createContext<MapDataContextType | null>(null);
 function Map() {
   let [searchParams, setSearchParams] = useSearchParams();
-  const defaultPosition = "v35";
+  const defaultPosition = "v199";
   const startPosition = searchParams.get("position") || defaultPosition;
   const [navigation, setNavigation] = useState<Navigation>({
     start: startPosition,
     end: "",
+    avoidStairs: false,
   });
   const [isEditMode, setIsEditMode] = useState<boolean>(false);
+
   const navigationValue: NavigationContextType = {
     navigation,
     setNavigation,
@@ -57,4 +59,12 @@ function Map() {
   );
 }
 
-export default Map;
+import { FloorProvider } from "@/context/FloorContext"; // make sure path is correct
+
+export default function MapWithFloor() {
+  return (
+    <FloorProvider>
+      <Map />
+    </FloorProvider>
+  );
+}

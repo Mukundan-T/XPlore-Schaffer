@@ -1,4 +1,4 @@
-import logo from "@/assets/img/pathpal-logo.svg";
+import logo from "@/assets/img/Schaffer_logo.svg";
 function Loading() {
   return (
     <div className="flex items-center justify-center h-screen">

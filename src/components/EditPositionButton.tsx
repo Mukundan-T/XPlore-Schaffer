@@ -1,4 +1,4 @@
-import { FiMapPin } from "react-icons/fi";
+import { MdEditLocationAlt } from "react-icons/md";
 import Tooltip from "./ui/Tooltip";
 import { NavigationContext } from "@/pages/Map";
 import { NavigationContextType } from "@/utils/types";
@@ -9,14 +9,16 @@ function EditPositionButton() {
   const { isEditMode, setIsEditMode, setNavigation } = useContext(
     NavigationContext
   ) as NavigationContextType;
+
   function handleEdit() {
     setIsEditMode(!isEditMode);
-    resetEdges();
+    resetEdges(setNavigation);
     setNavigation((prevNavigation) => ({
       ...prevNavigation,
       end: "",
     }));
   }
+  
   return (
     <Tooltip content="Change Position" className="bg-green-500">
       <button
@@ -25,7 +27,7 @@ function EditPositionButton() {
         onClick={() => handleEdit()}
         aria-label="change position"
       >
-        <FiMapPin />
+        <MdEditLocationAlt />
       </button>
     </Tooltip>
   );
