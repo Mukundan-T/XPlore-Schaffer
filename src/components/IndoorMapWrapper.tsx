@@ -9,7 +9,6 @@ import {
   ObjectItem,
 } from "../utils/types";
 import { MapBackground, Paths, Positions, Objects } from "./IndoorMap";
-
 import Controls from "./MapControls";
 import ObjectDetailsModal from "./Modals/ObjectDetailsModal";
 import { navigateToObject } from "@/utils/navigationHelper";
@@ -24,8 +23,7 @@ function IndoorMapWrapper() {
     NavigationContext
   ) as NavigationContextType;
   const { objects } = useContext(MapDataContext) as MapDataContextType;
-  const { currentFloor } = useFloor();
-  const floorObjects = objects.filter(obj => obj.floor === currentFloor);
+  const { currentFloor, setCurrentFloor } = useFloor();
 
   async function handleObjectClick(e: React.MouseEvent<SVGPathElement>) {
     if (!isEditMode) {
@@ -49,7 +47,7 @@ function IndoorMapWrapper() {
 
   function handleNavigationClick() {
     setModalOpen(false);
-    navigateToObject(object.name, navigation, setNavigation);
+    navigateToObject(object.name, navigation, setNavigation, setCurrentFloor);
   }
   return (
     <div className="relative w-full h-full bg-white center">

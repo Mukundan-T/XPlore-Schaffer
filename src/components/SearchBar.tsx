@@ -12,6 +12,7 @@ import {
   NavigationContextType,
   ObjectItem,
 } from "../utils/types";
+import { useFloor } from "@/context/FloorContext";
 
 function SearchBar() {
   const [inputValue, setInputValue] = useState<string>("");
@@ -28,6 +29,7 @@ function SearchBar() {
   const { setIsEditMode } = useContext(
     NavigationContext
   ) as NavigationContextType;
+  const { setCurrentFloor } = useFloor();
 
   useEffect(() => {
     setSuggestions(objects);
@@ -77,7 +79,8 @@ function SearchBar() {
         navigateToObject(
           suggestions[selectedIndex].name,
           navigation,
-          setNavigation
+          setNavigation,
+          setCurrentFloor
         );
       }
     }
@@ -121,14 +124,14 @@ function SearchBar() {
       //? To test the navigation feature
       if (inputValue === "Test") {
         const delay = 500;
-        navigationTestAll(objects, 0, delay, navigation, setNavigation);
+        navigationTestAll(objects, 0, delay, navigation, setNavigation, setCurrentFloor);
         return;
       } else {
         setIsInputInvalid(true);
         return;
       }
     }
-    navigateToObject(matchingObject.name, navigation, setNavigation);
+    navigateToObject(matchingObject.name, navigation, setNavigation, setCurrentFloor);
     setSelectedIndex(-1);
   }
 

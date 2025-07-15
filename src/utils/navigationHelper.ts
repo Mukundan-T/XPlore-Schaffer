@@ -5,33 +5,19 @@ import { ObjectItem } from "./types";
 import { graphData } from "@/store/graphData";
 import { toast } from "react-toastify";
 import { rebuildGraph } from "@/algorithms/dijkstra";
+import { showFloorSwitchToast } from "./showFloorSwitchToast";
 export let routeLength = 0;
 
 // Finds a vertex in the graph that corresponds to a given object name.
 const findVertexByObjectId = (vertexId: string) =>
   graphData.vertices.find((v) => v.objectName === vertexId);
 
-// Return the correct floor to switch to.
-function formatFloorLabel(floor: string) {
-  switch (floor) {
-    case "floor0":
-      return "Basement";
-    case "floor1":
-      return "1st Floor";
-    case "floor2":
-      return "2nd Floor";
-    case "floor3":
-      return "3rd Floor";
-    default:
-      return floor;
-  }
-}
-
 // Main navigation function. Finds and renders the path to a selected object.
 export function navigateToObject(
   selectedObjectId: string, // name of the destination object
   navigation: NavigationContextType["navigation"], // current navigation state
-  setNavigation: NavigationContextType["setNavigation"] // setter for navigation state
+  setNavigation: NavigationContextType["setNavigation"], // setter for navigation state
+  setCurrentFloor: (floor: string) => void // New parameter
 ) {
   // Find the target vertex based on the object's name
   const target = findVertexByObjectId(selectedObjectId);
@@ -66,14 +52,8 @@ export function navigateToObject(
 
     // If the current vertex is on a different floor, start a new path segment
     if (currVertex.floor !== currentFloor) {
-      // ❗️Toast to notify floor change
-      toast.info(`Continue on ${formatFloorLabel(currVertex.floor)}`, {
-        autoClose: false,     // Stay on screen until closed
-        closeOnClick: false,  // Optional: prevent accidental dismissal
-        closeButton: true,    // Show close (X) button
-        position: "bottom-right", // Optional: move where it's shown
-      });
-
+      // Toast to notify floor change
+      showFloorSwitchToast(currVertex.floor, setCurrentFloor); // show button toast
       // Save the completed path for the current floor
       perFloorPaths[currentFloor] = pathSegment;
       
@@ -163,18 +143,19 @@ export function navigateWithDelay(
   index: number, // current index in the sequence
   delay: number, // delay between steps in milliseconds
   navigation: Navigation, // current navigation state
-  setNavigation: Dispatch<SetStateAction<Navigation>> // setter for navigation state
+  setNavigation: Dispatch<SetStateAction<Navigation>>, // setter for navigation state
+  setCurrentFloor: (floor: string) => void // Added
 ) {
   // Base case: stop when all destinations are visited
   if (index < objects.length) {
     const obj = objects[index];
 
     // Navigate to current object
-    navigateToObject(obj.name, navigation, setNavigation);
+    navigateToObject(obj.name, navigation, setNavigation, setCurrentFloor);
 
     // Schedule the next navigation step
     setTimeout(() => {
-      navigateWithDelay(objects, index + 1, delay, navigation, setNavigation);
+      navigateWithDelay(objects, index + 1, delay, navigation, setNavigation, setCurrentFloor);
     }, delay);
   }
 }

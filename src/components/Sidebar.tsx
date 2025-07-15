@@ -7,12 +7,8 @@ import {
   ObjectItem,
 } from "@/utils/types";
 import { MapDataContext, NavigationContext } from "../pages/Map";
-
 import { navigateToObject } from "@/utils/navigationHelper";
-
-
 import { useFloor } from "@/context/FloorContext";
-
 
 interface ParsedObjects {
   [key: string]: {
@@ -30,8 +26,6 @@ function Sidebar() {
   const [isRotating, setIsRotating] = useState(false);
   
   const { currentFloor, setCurrentFloor } = useFloor();
-  //const filteredObjects = objects.filter(obj => obj.floor === currentFloor);
-
 
   useEffect(() => {
     const groupedObjects = () => {
@@ -57,7 +51,7 @@ function Sidebar() {
     setIsEditMode(false);
     if (!object) return;
     console.log(object);
-    navigateToObject(object.name, navigation, setNavigation);
+    navigateToObject(object.name, navigation, setNavigation, setCurrentFloor);
   }
 
   return (
