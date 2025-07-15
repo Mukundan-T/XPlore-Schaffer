@@ -5,7 +5,7 @@ This is a customized version of [indoor-wayfinder](https://github.com/KnotzerIO/
 ## About XPlore Schaffer
 
 XPlore Schaffer is a innovative and useful application for multi-floor indoor navigation. It extends the
-work of Mark Knotzer on PathPal by adding support for multi-floor traversal and accessibility such as Avoid Stairs options.
+work of Mark Knotzer on PathPal by adding support for multi-floor traversal and accessibility such as stair avoidance.
 <br>
 **Demo:** [Visit XPlore Schaffer](https://xplore-schaffer.vercel.app/)
 
@@ -14,9 +14,9 @@ work of Mark Knotzer on PathPal by adding support for multi-floor traversal and 
 - Multi-floor navigation
 - Avoid stairs option
 - Editable starting location
-- Resetting starting location
+- Resettable starting location
 - Interactive SVG Maps
-- Map zones with information
+- Informative zones on the maps
 
 ## Getting Started
 
