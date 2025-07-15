@@ -38,4 +38,4 @@ Follow these instructions to get the project running:
    npm run dev
    ```
 
-After running these commands, your default web browser should automatically open and navigate to `localhost:5173`, where you can see the running application.
+After running these commands, your default web browser should automatically open and navigate to the running application.
