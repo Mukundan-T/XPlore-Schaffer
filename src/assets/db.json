@@ -73,7 +73,7 @@
     {
       "id": "openCollab",
       "categoryId": "study space",
-      "name": "Open Collaboration Floor 2",
+      "name": "Open Collaborative Study Floor 2",
       "desc": "Conversations allowed, short cell phone conversations",
       "floor": "floor2"
     },
@@ -164,7 +164,7 @@
     {
       "id": "learningCommons",
       "categoryId": "study space",
-      "name": "Learning Commons",
+      "name": "Learning Commons (Open Collaborative Study)",
       "desc": "Conversations allowed, short cell phone conversations",
       "floor": "floor1"
     },
@@ -255,7 +255,7 @@
     {
       "id": "lallyReadingRoom",
       "categoryId": "study space",
-      "name": "Lally Reading Room",
+      "name": "Lally Reading Room (Quiet Study)",
       "desc": "No conversations or cell phone conversations",
       "floor": "floor1"
     },

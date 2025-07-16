@@ -112,7 +112,7 @@ const zoneData = [
     floor: "floor2",
   },
   {
-    id: "Open Collaboration Floor 2",
+    id: "Open Collaborative Study Floor 2",
     d: `m 574.93695,506.57315 -0.52386,107.91528 117.86863,0.26193
         v 15.97774
         l 211.63966,-0.52386
@@ -284,7 +284,7 @@ const zoneData = [
     floor: "floor1",
   },
   {
-    id: "Learning Commons",
+    id: "Learning Commons (Open Collaborative Study)",
     d: `m 1012.0661,811.58636
         h 327.7806
         v 210.96844
@@ -385,24 +385,24 @@ const zoneData = [
   },
   {
     id: "Reference JX-Z",
-    d: `m 1192.1331,262.63031
-        h 295.9357
+    d: `m 1195.4382,262.63031
+        h 292.6306
         v 23.13587
-        h -295.9357
+        h -292.6306
         z`,
     floor: "floor1",
   },
   {
     id: "CDs",
-    d: `m 1184.5059,326.69888
-        h 303.563
-        v 31.78005
-        h -303.563
+    d: `m 1195.9467,326.69888
+        h 292.1222
+        v 32.16286
+        h -292.1222
         z`,
     floor: "floor1",
   },
   {
-    id: "Lally Reading Room",
+    id: "Lally Reading Room (Quiet Study)",
     d: `m 883.77435,478.20175 -0.17977,-112.6291
         h -5.57303
         l 0.0899,-129.61784 2.24719,-5.97752 3.5955,
@@ -485,6 +485,15 @@ const zoneData = [
         v 41.44123
         h -56.94984
         z`,
+    floor: "floor1",
+  },
+  {
+    id: "Offices",
+    d: `m 723.547,655.13446
+        h 114.19774
+        v 45.43161
+        H 723.547
+        Z`,
     floor: "floor1",
   },
 

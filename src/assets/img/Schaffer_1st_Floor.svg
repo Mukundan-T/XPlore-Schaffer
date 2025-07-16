@@ -21,9 +21,9 @@
      inkscape:pageopacity="0.0"
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
-     inkscape:zoom="0.69531323"
-     inkscape:cx="1009.6169"
-     inkscape:cy="655.10044"
+     inkscape:zoom="1"
+     inkscape:cx="952"
+     inkscape:cy="547.5"
      inkscape:window-width="1920"
      inkscape:window-height="1094"
      inkscape:window-x="-11"
@@ -3388,12 +3388,12 @@
        d="m 1187.811,360.51285 h 302.5461 V 600.00728 H 1187.811 Z" />
     <path
        id="CDs"
-       style="fill:none"
-       d="m 1184.5059,326.69888 h 303.563 v 31.78005 h -303.563 z" />
+       style="fill:none;stroke-width:0.986866"
+       d="m 1195.9467,326.69888 h 292.1222 v 32.16286 h -292.1222 z" />
     <path
        id="RefJX-Z"
-       style="fill:none"
-       d="m 1192.1331,262.63031 h 295.9357 v 23.13587 h -295.9357 z" />
+       style="fill:none;stroke-width:0.9944"
+       d="m 1195.4382,262.63031 h 292.6306 v 23.13587 h -292.6306 z" />
     <path
        id="CurrentPeriodicals"
        style="fill:none;stroke-width:0.989399"
@@ -3430,5 +3430,9 @@
        style="fill:none"
        d="m 1289.7065,661.39257 0.1798,72.08981 9.8876,0.89887 7.2759,2.34379 11.5997,4.86235 5.7087,3.40059 6.4269,2.5618 5.1686,0.98876 4.5842,0.26966 -0.4369,-87.78323 z"
        id="Office105" />
+    <path
+       id="Office116"
+       style="fill:none;fill-opacity:0.959538"
+       d="m 723.547,655.13446 h 114.19774 v 45.43161 H 723.547 Z" />
   </g>
 </svg>
