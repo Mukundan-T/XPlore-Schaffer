@@ -7,7 +7,7 @@
 }
 
 .object {
-  stroke-opacity: 0;
+  stroke-opacity: 1;
   opacity: var(--object-opacity);
   fill: var(--object-color);
 }

@@ -21,15 +21,15 @@
      inkscape:pageopacity="0.0"
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
-     inkscape:zoom="1"
-     inkscape:cx="952"
-     inkscape:cy="547.5"
+     inkscape:zoom="2.8284271"
+     inkscape:cx="654.07377"
+     inkscape:cy="247.3106"
      inkscape:window-width="1920"
      inkscape:window-height="1094"
      inkscape:window-x="-11"
      inkscape:window-y="-11"
      inkscape:window-maximized="1"
-     inkscape:current-layer="layer2" />
+     inkscape:current-layer="svg995" />
   <defs
      id="defs32">
     <style
@@ -1775,10 +1775,10 @@
        id="rect983" />
     <rect
        class="cls-25"
-       x="740.13"
-       y="208.48"
-       width="289.17999"
-       height="14.95"
+       x="745.12189"
+       y="208.47188"
+       width="284.19623"
+       height="14.966232"
        id="rect984" />
     <rect
        class="cls-30"
@@ -1840,10 +1840,10 @@
        id="line990" />
     <rect
        class="cls-25"
-       x="159.88"
-       y="209"
-       width="265.35001"
-       height="14.95"
+       x="157.04099"
+       y="209.16617"
+       width="259.60345"
+       height="14.971191"
        id="rect991" />
     <rect
        style="fill:#000000"
@@ -3388,20 +3388,20 @@
        d="m 1187.811,360.51285 h 302.5461 V 600.00728 H 1187.811 Z" />
     <path
        id="CDs"
-       style="fill:none;stroke-width:0.986866"
-       d="m 1195.9467,326.69888 h 292.1222 v 32.16286 h -292.1222 z" />
+       style="fill:none;stroke-width:1.02253"
+       d="m 1196.017,326.69888 h 292.0519 v 34.53786 H 1196.017 Z" />
     <path
        id="RefJX-Z"
-       style="fill:none;stroke-width:0.9944"
-       d="m 1195.4382,262.63031 h 292.6306 v 23.13587 h -292.6306 z" />
+       style="fill:none;stroke-width:0.993577"
+       d="m 1195.9226,262.63031 h 292.1462 v 23.13587 h -292.1462 z" />
     <path
        id="CurrentPeriodicals"
-       style="fill:none;stroke-width:0.989399"
-       d="M 607.63452,331.52945 H 879.41 v 32.03429 H 607.63452 Z" />
+       style="fill:none;stroke-width:0.986893"
+       d="M 607.63452,331.52945 H 878.035 v 32.03429 H 607.63452 Z" />
     <path
        id="RefA-JX"
-       style="fill:none;stroke-width:0.991843"
-       d="m 608.65143,262.63031 h 269.61818 v 26.69524 H 608.65143 Z" />
+       style="fill:none;stroke-width:0.993792"
+       d="m 607.59077,262.63031 h 270.67884 v 26.69524 H 607.59077 Z" />
     <path
        id="Atlases"
        style="fill:none;stroke-width:0.886158"
