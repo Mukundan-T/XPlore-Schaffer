@@ -16,6 +16,7 @@ const zoneData = [
         v -71.24723 
         z`,
     floor: "floor3",
+    type: "restricted"
   },
   {
     id: "Library Administration",
@@ -29,6 +30,7 @@ const zoneData = [
         v 124.54533 
         z`,
     floor: "floor3",
+    type: "allowed"
   },
   {
     id: "Special Collections",
@@ -42,6 +44,7 @@ const zoneData = [
         l 0.3663,-218.68687 
         z`,
     floor: "floor3",
+    type: "allowed"
   },
   {
     id: "Processing and Digitization",
@@ -50,6 +53,7 @@ const zoneData = [
         l -0.18316,-30.58685
         z`,
     floor: "floor3",
+    type: "restricted"
   },
   {
     id: "Quiet Study Floor 3",
@@ -58,6 +62,7 @@ const zoneData = [
               -88.0409,0.11045 0.1037,-123.46523 48.971,-0.0229 0.042,-53.84348
         z`,
     floor: "floor3",
+    type: "allowed"
   },
   {
     id: "Restrooms Floor 3",
@@ -67,6 +72,7 @@ const zoneData = [
         V 709.97395
         Z`,
     floor: "floor3",
+    type: "allowed"
   },
 
   /*** FLOOR 2 ***/
@@ -78,6 +84,7 @@ const zoneData = [
         h -68.1018
         z`,
     floor: "floor2",
+    type: "restricted"
   },
   {
     id: "Writing Center",
@@ -88,6 +95,7 @@ const zoneData = [
         l 0.52386,-82.76997
         z`,
     floor: "floor2",
+    type: "allowed"
   },
   {
     id: "Phi Beta Kappa (PBK) Room",
@@ -97,6 +105,7 @@ const zoneData = [
         h -92.7233
         z`,
     floor: "floor2",
+    type: "allowed"
   },
   {
     id: "Accommodative Services",
@@ -110,6 +119,7 @@ const zoneData = [
           -10.73914,10.73914 -6.67922,8.51273 -6.0244,9.42949
         z`,
     floor: "floor2",
+    type: "allowed"
   },
   {
     id: "Open Collaborative Study Floor 2",
@@ -123,6 +133,7 @@ const zoneData = [
           -33.78427 -919.90506,0.0463 -0.0387,30.56205
         z`,
     floor: "floor2",
+    type: "allowed"
   },
   {
     id: "Permanent Collection",
@@ -133,6 +144,7 @@ const zoneData = [
         l 193.362,-0.74085 -0.1852,137.42781
         z`,
     floor: "floor2",
+    type: "allowed"
   },
   {
     id: "Learning Lab",
@@ -142,6 +154,7 @@ const zoneData = [
           -0.204,-186.40398
         z`,
     floor: "floor2",
+    type: "allowed"
   },
   {
     id: "Engaging Tech Lab",
@@ -152,6 +165,7 @@ const zoneData = [
           2.5538,-2.61931 30.8937,-0.27849 0.047,-211.44303
         z`,
     floor: "floor2",
+    type: "allowed"
   },
   {
     id: "Restrooms Floor 2",
@@ -162,6 +176,7 @@ const zoneData = [
           0.3929,69.01863 130.83419,-0.91676
         z`,
     floor: "floor2",
+    type: "allowed"
   },
   {
     id: "Quiet Study Floor 2",
@@ -172,6 +187,7 @@ const zoneData = [
         v -132.0128
         z`,
     floor: "floor2",
+    type: "allowed"
   },
   {
     id: "Group Study Area",
@@ -181,6 +197,7 @@ const zoneData = [
         h -40.0753
         z`,
     floor: "floor2",
+    type: "allowed"
   },
   {
     id: "Offices",
@@ -190,6 +207,7 @@ const zoneData = [
         h -68.52869
         z`,
     floor: "floor2",
+    type: "restricted"
   },
   {
     id: "Offices",
@@ -199,6 +217,7 @@ const zoneData = [
         h -69.82518
         z`,
     floor: "floor2",
+    type: "restricted"
   },
   {
     id: "Offices",
@@ -208,6 +227,7 @@ const zoneData = [
         h -69.45475
         z`,
     floor: "floor2",
+    type: "restricted"
   },
   {
     id: "Offices",
@@ -217,6 +237,7 @@ const zoneData = [
         h -66.9232
         z`,
     floor: "floor2",
+    type: "restricted"
   }, 
   {
     id: "Stacks (A-D)",
@@ -229,6 +250,7 @@ const zoneData = [
         l 0.27782,-99.27399 -14.90962,-0.18521 0.0926,-42.13589 15.37265,0.0926
         z`,
     floor: "floor2",
+    type: "allowed"
   },
   {
     id: "Stacks (Oversized)",
@@ -241,6 +263,7 @@ const zoneData = [
         v -41.85806
         z`,
     floor: "floor2",
+    type: "allowed"
   }, 
   {
     id: "Additional Quiet Study Floor 2",
@@ -253,6 +276,7 @@ const zoneData = [
         v 14.73358
         z`,
     floor: "floor2",
+    type: "allowed"
   }, 
   
   /*** FLOOR 1 ***/
@@ -264,6 +288,7 @@ const zoneData = [
           -0.4369,-87.78323
         z`,
     floor: "floor1",
+    type: "restricted"
   },
   {
     id: "Office 122",
@@ -273,6 +298,7 @@ const zoneData = [
         H 848.35864
         Z`,
     floor: "floor1",
+    type: "restricted"
   },
   {
     id: "Entrance",
@@ -282,6 +308,7 @@ const zoneData = [
         h -64.5771
         z`,
     floor: "floor1",
+    type: "allowed"
   },
   {
     id: "Learning Commons (Open Collaborative Study)",
@@ -291,6 +318,7 @@ const zoneData = [
         h -327.7806
         z`,
     floor: "floor1",
+    type: "allowed"
   },
   {
     id: "Newspapers",
@@ -300,6 +328,7 @@ const zoneData = [
         h -45.38191
         z`,
     floor: "floor1",
+    type: "allowed"
   },
   {
     id: "Library Service Desk",
@@ -311,6 +340,7 @@ const zoneData = [
         h 74.49243
         z`,
     floor: "floor1",
+    type: "allowed"
   },
   {
     id: "Information Technology Services (ITS)",
@@ -320,6 +350,7 @@ const zoneData = [
         H 861.87488
         Z`,
     floor: "floor1",
+    type: "allowed"
   },
   {
     id: "Restrooms Floor 1",
@@ -329,6 +360,7 @@ const zoneData = [
         h -38.2921
         z`,
     floor: "floor1",
+    type: "allowed"
   },
   {
     id: "Access Services",
@@ -338,6 +370,7 @@ const zoneData = [
         H 723.56812
         Z`,
     floor: "floor1",
+    type: "restricted"
   },
   {
     id: "Content & Digital Library Systems (CDLS)",
@@ -347,6 +380,7 @@ const zoneData = [
         H 573.56628
         Z`,
     floor: "floor1",
+    type: "restricted"
   },
   {
     id: "Printers/Copiers",
@@ -356,6 +390,7 @@ const zoneData = [
         h -154.9595
         z`,
     floor: "floor1",
+    type: "allowed"
   },
   {
     id: "Bloomberg",
@@ -364,6 +399,7 @@ const zoneData = [
           -0.2365,-71.46226
         z`,
     floor: "floor1",
+    type: "allowed"
   },
   {
     id: "Current Reading Area",
@@ -373,6 +409,7 @@ const zoneData = [
         h -166.2732
         z`,
     floor: "floor1",
+    type: "allowed"
   },
   {
     id: "Quiet Study Floor 1",
@@ -382,6 +419,7 @@ const zoneData = [
         H 1187.811
         Z`,
     floor: "floor1",
+    type: "allowed"
   },
   {
     id: "Reference JX-Z",
@@ -391,6 +429,7 @@ const zoneData = [
         h -292.6306
         z`,
     floor: "floor1",
+    type: "allowed"
   },
   {
     id: "CDs",
@@ -400,6 +439,7 @@ const zoneData = [
         h -292.1222
         z`,
     floor: "floor1",
+    type: "allowed"
   },
   {
     id: "Lally Reading Room (Quiet Study)",
@@ -441,6 +481,7 @@ const zoneData = [
           -0.3162,117.5029
         z`,
     floor: "floor1",
+    type: "allowed"
   },
   {
     id: "Periodicals (Current)",
@@ -450,6 +491,7 @@ const zoneData = [
         H 607.63452
         Z`,
     floor: "floor1",
+    type: "allowed"
   },
   {
     id: "Reference A-JX",
@@ -459,6 +501,7 @@ const zoneData = [
         H 608.65143
         Z`,
     floor: "floor1",
+    type: "allowed"
   },
   {
     id: "Atlases",
@@ -468,6 +511,7 @@ const zoneData = [
         h -32.54277
         z`,
     floor: "floor1",
+    type: "allowed"
   },
   {
     id: "Offices",
@@ -477,6 +521,7 @@ const zoneData = [
         h -60.76345
         z`,
     floor: "floor1",
+    type: "restricted"
   },
   {
     id: "Offices",
@@ -486,6 +531,7 @@ const zoneData = [
         h -56.94984
         z`,
     floor: "floor1",
+    type: "restricted"
   },
   {
     id: "Offices",
@@ -495,6 +541,7 @@ const zoneData = [
         H 723.547
         Z`,
     floor: "floor1",
+    type: "restricted"
   },
 
   /*** BASEMENT ***/
@@ -506,6 +553,7 @@ const zoneData = [
           -21.90837,0.017 -0.0334,56.5647 85.83142,0.2669
         z`,
     floor: "floor0",
+    type: "allowed"
   },
   {
     id: "Stacks (K)",
@@ -515,6 +563,7 @@ const zoneData = [
         h -91.57131
         z`,
     floor: "floor0",
+    type: "allowed"
   },
   {
     id: "Stacks (J)",
@@ -524,6 +573,7 @@ const zoneData = [
         h -91.52718
         z`,
     floor: "floor0",
+    type: "allowed"
   },
   {
     id: "Stacks (H)",
@@ -535,6 +585,7 @@ const zoneData = [
           0.1325,115.12583
         z`,
     floor: "floor0",
+    type: "allowed"
   },
   {
     id: "Stacks (G)",
@@ -542,6 +593,7 @@ const zoneData = [
           92.4623,0.0228 -0.01,-129.13997
         z`,
     floor: "floor0",
+    type: "allowed"
   },
   {
     id: "Stacks (E)",
@@ -549,6 +601,7 @@ const zoneData = [
           98.7656,0.52343 -0.5498,-192.46725 -191.416,-0.15468
         z`,
     floor: "floor0",
+    type: "allowed"
   },
   {
     id: "Stacks (F)",
@@ -558,6 +611,7 @@ const zoneData = [
         l -92.4561,-0.0149
         z`,
     floor: "floor0",
+    type: "allowed"
   },
   {
     id: "Group Study Rooms",
@@ -567,6 +621,7 @@ const zoneData = [
         H 851.625
         Z`,
     floor: "floor0",
+    type: "allowed"
   },
   {
     id: "Restrooms Basement",
@@ -576,6 +631,7 @@ const zoneData = [
         h -88.91868
         z`,
     floor: "floor0",
+    type: "allowed"
   },
   {
     id: "Microfilms & Microfilm Printer",
@@ -591,6 +647,7 @@ const zoneData = [
         v 17.05895
         z`,
     floor: "floor0",
+    type: "allowed"
   },
   {
     id: "More Microfilms",
@@ -600,6 +657,7 @@ const zoneData = [
         h -17.67767
         z`,
     floor: "floor0",
+    type: "allowed"
   },
   {
     id: "Stacks (L-P)",
@@ -609,6 +667,7 @@ const zoneData = [
         H 678.46893
         Z`,
     floor: "floor0",
+    type: "allowed"
   },
   {
     id: "Stacks (P-Q)",
@@ -618,6 +677,7 @@ const zoneData = [
         H 678.11542
         Z`,
     floor: "floor0",
+    type: "allowed"
   },
   {
     id: "Stacks (Q-T)",
@@ -627,6 +687,7 @@ const zoneData = [
         H 677.40826
         Z`,
     floor: "floor0",
+    type: "allowed"
   },
   {
     id: "Stacks (T-Z)",
@@ -636,6 +697,7 @@ const zoneData = [
         H 1200.137
         Z`,
     floor: "floor0",
+    type: "allowed"
   },
   {
     id: "Periodicals (A-I)",
@@ -645,6 +707,7 @@ const zoneData = [
         h -255.2655
         z`,
     floor: "floor0",
+    type: "allowed"
   },
   {
     id: "Periodicals (J-Z)",
@@ -654,6 +717,7 @@ const zoneData = [
         h -261.9831
         z`,
     floor: "floor0",
+    type: "allowed"
   },
   {
     id: "Periodicals (Classified)",
@@ -663,6 +727,7 @@ const zoneData = [
         h -82.5
         z`,
     floor: "floor0",
+    type: "allowed"
   },
   {
     id: "Periodicals (Oversized)",
@@ -672,6 +737,7 @@ const zoneData = [
         h -47.75
         z`,
     floor: "floor0",
+    type: "allowed"
   },
   {
     id: "Government Documents",
@@ -681,6 +747,7 @@ const zoneData = [
         h -139.4769
         z`,
     floor: "floor0",
+    type: "allowed"
   },
   {
     id: "Map Collection",
@@ -690,6 +757,7 @@ const zoneData = [
         h -105.7124
         z`,
     floor: "floor0",
+    type: "allowed"
   },
   {
     id: "DVD Collection",
@@ -699,6 +767,7 @@ const zoneData = [
         H 1365.5
         Z`,
     floor: "floor0",
+    type: "allowed"
   },
   {
     id: "Quiet Study Basement",
@@ -707,20 +776,46 @@ const zoneData = [
           -28.0633,0.17678 -0.088,-57.40823
         z`,
     floor: "floor0",
+    type: "allowed"
   }
 ];
+
+function getZoneStyle(type: string) {
+  switch (type) {
+    case "restricted":
+      return {
+        fill: "url(#diagonalStripes)",
+        stroke: "darkred",
+        strokeWidth: 2
+      };
+    default:
+      return {
+        fill: "rgba(129, 129, 129, 0.557)",
+        stroke: "black",
+        strokeWidth: 1
+      };
+  }
+}
 
 function Objects({ handleObjectClick, className, currentFloor }: ObjectsProps) {
   return (
     <g id="Objects">
+
+      <defs>
+        <pattern id="diagonalStripes" patternUnits="userSpaceOnUse" width="6" height="6" patternTransform="rotate(45)">
+          <line x1="0" y="0" x2="0" y2="6" stroke="red" strokeWidth="9" />
+        </pattern>
+      </defs>
+
       {zoneData
         .filter((zone) => zone.floor === currentFloor)
         .map((zone, index) => (
           <path
             key={`${zone.id}-${zone.floor}-${index}`}
-            id={zone.id} //{`${zone.id}-${zone.floor}-${index}`} // only if needed
+            id={zone.id}
             className={`${className} object`}
             d={zone.d}
+            style={getZoneStyle(zone.type)}
             onClick={handleObjectClick}
           />
         ))}

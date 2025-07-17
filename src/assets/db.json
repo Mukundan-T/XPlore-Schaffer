@@ -123,14 +123,14 @@
       "id": "regStacks",
       "categoryId": "stacks",
       "name": "Stacks (A-D)",
-      "desc": "TBA",
+      "desc": "Includes general encyclopedias, almanacs, and the subjects of philosophy, psychology, religions, auxiliary sciences of history, and world history.",
       "floor": "floor2"
     },
     {
       "id": "oversizeStacks",
       "categoryId": "stacks",
       "name": "Stacks (Oversized)",
-      "desc": "TBA",
+      "desc": "Has larger books and texts that don't fit with the rest.",
       "floor": "floor2"
     },
     {
@@ -292,42 +292,42 @@
       "id": "law",
       "categoryId": "stacks",
       "name": "Stacks (K)",
-      "desc": "TBA",
+      "desc": "Law section",
       "floor": "floor0"
     },
     {
       "id": "poliSci",
       "categoryId": "stacks",
       "name": "Stacks (J)",
-      "desc": "TBA",
+      "desc": "Political Science section",
       "floor": "floor0"
     },
     {
       "id": "socialSci",
       "categoryId": "stacks",
       "name": "Stacks (H)",
-      "desc": "TBA",
+      "desc": "Social Sciences section",
       "floor": "floor0"
     },
     {
       "id": "geoAnthroRec",
       "categoryId": "stacks",
       "name": "Stacks (G)",
-      "desc": "TBA",
+      "desc": "Geography, Anthropology, and Recreation section",
       "floor": "floor0"
     },
     {
       "id": "americaUS",
       "categoryId": "stacks",
       "name": "Stacks (E)",
-      "desc": "TBA",
+      "desc": "History of the Americas section",
       "floor": "floor0"
     },
     {
       "id": "americaOther",
       "categoryId": "stacks",
       "name": "Stacks (F)",
-      "desc": "TBA",
+      "desc": "History of the Americas section",
       "floor": "floor0"
     },
     {
@@ -362,28 +362,28 @@
       "id": "LtoP",
       "categoryId": "stacks",
       "name": "Stacks (L-P)",
-      "desc": "TBA",
+      "desc": "Includes education, music, fine arts, language, and literature.",
       "floor": "floor0"
     },
     {
       "id": "PtoQ",
       "categoryId": "stacks",
       "name": "Stacks (P-Q)",
-      "desc": "TBA",
+      "desc": "Includes language and literature, and the sciences.",
       "floor": "floor0"
     },
     {
       "id": "QtoT",
       "categoryId": "stacks",
       "name": "Stacks (Q-T)",
-      "desc": "TBA",
+      "desc": "Includes sciences, medicine, agriculture, and technology.",
       "floor": "floor0"
     },
     {
       "id": "TtoZ",
       "categoryId": "stacks",
       "name": "Stacks (T-Z)",
-      "desc": "TBA",
+      "desc": "Includes technology, military science, naval science, and bibliography (industry and trade, information resources, libraries, paleography, and writing).",
       "floor": "floor0"
     },
     {
