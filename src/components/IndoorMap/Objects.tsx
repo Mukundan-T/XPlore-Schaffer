@@ -84,7 +84,7 @@ const zoneData = [
         h -68.1018
         z`,
     floor: "floor2",
-    type: "restricted"
+    type: "allowed"
   },
   {
     id: "Writing Center",
@@ -288,7 +288,7 @@ const zoneData = [
           -0.4369,-87.78323
         z`,
     floor: "floor1",
-    type: "restricted"
+    type: "allowed"
   },
   {
     id: "Office 122",
@@ -298,7 +298,7 @@ const zoneData = [
         H 848.35864
         Z`,
     floor: "floor1",
-    type: "restricted"
+    type: "allowed"
   },
   {
     id: "Entrance",
