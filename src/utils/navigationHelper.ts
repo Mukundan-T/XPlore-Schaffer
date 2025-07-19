@@ -17,7 +17,8 @@ export function navigateToObject(
   selectedObjectId: string, // name of the destination object
   navigation: NavigationContextType["navigation"], // current navigation state
   setNavigation: NavigationContextType["setNavigation"], // setter for navigation state
-  setCurrentFloor: (floor: string) => void // New parameter
+  setCurrentFloor: (floor: string) => void, // New parameter
+  currentFloor: string // The floor viewed on the screen
 ) {
   // Find the target vertex based on the object's name
   const target = findVertexByObjectId(selectedObjectId);
@@ -41,7 +42,7 @@ export function navigateToObject(
   const perFloorPaths: Record<string, string> = {};
 
   // Start building path segment from the start vertex
-  let currentFloor = startVertex.floor;
+  let startFloor = startVertex.floor;
   let pathSegment = `M${startVertex.cx} ${startVertex.cy}`; // SVG "move to" command
 
   // Loop through the path and construct SVG path strings floor by floor
@@ -51,15 +52,19 @@ export function navigateToObject(
     if (!prevVertex || !currVertex) continue;
 
     // If the current vertex is on a different floor, start a new path segment
-    if (currVertex.floor !== currentFloor) {
+    if (currVertex.floor !== startFloor) {
+
       // Toast to notify floor change
-      showFloorSwitchToast(currVertex.floor, setCurrentFloor); // show button toast
+      if (currentFloor === startFloor || currentFloor === currVertex.floor) { // change
+        showFloorSwitchToast(currVertex.floor, setCurrentFloor, startFloor, currentFloor); // show button toast
+      }
+
       // Save the completed path for the current floor
-      perFloorPaths[currentFloor] = pathSegment;
+      perFloorPaths[startFloor] = pathSegment;
       
       // Start a new path segment for the next floor
       pathSegment = `M${currVertex.cx} ${currVertex.cy}`;
-      currentFloor = currVertex.floor;
+      startFloor = currVertex.floor;
     } else {
       // No floor change — continue appending normally
       pathSegment += ` L${currVertex.cx} ${currVertex.cy}`;
@@ -68,16 +73,22 @@ export function navigateToObject(
   }
 
   // Save the final floor segment
-  perFloorPaths[currentFloor] = pathSegment;
+  perFloorPaths[startFloor] = pathSegment;
+  let newStartFloor = startVertex.floor;
+  let endFloor = target.floor;
 
   // Update the SVG path element on screen for the current floor.
-  // Note: This assumes the currently visible floor matches `currentFloor`.
-  // In practice, you should retrieve current floor from context instead.
   const navigationRoutePath = document.getElementById("navigation-route");
-  const current = currentFloor; // Replace with: const { currentFloor } = useFloor();
-  if (navigationRoutePath && perFloorPaths[current]) {
+
+  // Change floor if user viewing neither the start or end floor
+  if (currentFloor !== newStartFloor && currentFloor !== endFloor) {
+    setCurrentFloor(newStartFloor);
+    showFloorSwitchToast(endFloor, setCurrentFloor, startFloor, currentFloor); // show button toast
+  }
+
+  if (navigationRoutePath && perFloorPaths[endFloor]) {
     // Apply path string to the <path> element
-    navigationRoutePath.setAttribute("d", perFloorPaths[current]);
+    navigationRoutePath.setAttribute("d", perFloorPaths[currentFloor]);
 
     // Trigger animation effects
     navigationRoutePath.classList.remove("path-once", "path-active");
@@ -144,18 +155,19 @@ export function navigateWithDelay(
   delay: number, // delay between steps in milliseconds
   navigation: Navigation, // current navigation state
   setNavigation: Dispatch<SetStateAction<Navigation>>, // setter for navigation state
-  setCurrentFloor: (floor: string) => void // Added
+  setCurrentFloor: (floor: string) => void, // Added
+  currentFloor: string
 ) {
   // Base case: stop when all destinations are visited
   if (index < objects.length) {
     const obj = objects[index];
 
     // Navigate to current object
-    navigateToObject(obj.name, navigation, setNavigation, setCurrentFloor);
+    navigateToObject(obj.name, navigation, setNavigation, setCurrentFloor, currentFloor);
 
     // Schedule the next navigation step
     setTimeout(() => {
-      navigateWithDelay(objects, index + 1, delay, navigation, setNavigation, setCurrentFloor);
+      navigateWithDelay(objects, index + 1, delay, navigation, setNavigation, setCurrentFloor, currentFloor);
     }, delay);
   }
 }

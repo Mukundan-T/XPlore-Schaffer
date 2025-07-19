@@ -29,7 +29,7 @@ function SearchBar() {
   const { setIsEditMode } = useContext(
     NavigationContext
   ) as NavigationContextType;
-  const { setCurrentFloor } = useFloor();
+  const { currentFloor, setCurrentFloor } = useFloor();
 
   useEffect(() => {
     setSuggestions(objects);
@@ -48,9 +48,13 @@ function SearchBar() {
     setInputValue(value);
     if (value) {
       setIsAutocomplete(true);
-      const filteredSuggestions = objects.filter((obj) =>
+      const filteredNames = objects.filter((obj) =>
         obj.name.toLowerCase().includes(value.trim().toLowerCase())
       );
+      const filteredDescs = objects.filter((obj) =>
+        obj.desc.toLowerCase().includes(value.trim().toLowerCase())
+      );
+      const filteredSuggestions: ObjectItem[] = filteredNames.concat(filteredDescs);
       setSuggestions(filteredSuggestions);
     } else {
       setIsAutocomplete(false);
@@ -80,7 +84,8 @@ function SearchBar() {
           suggestions[selectedIndex].name,
           navigation,
           setNavigation,
-          setCurrentFloor
+          setCurrentFloor,
+          currentFloor
         );
       }
     }
@@ -124,14 +129,14 @@ function SearchBar() {
       //? To test the navigation feature
       if (inputValue === "Test") {
         const delay = 500;
-        navigationTestAll(objects, 0, delay, navigation, setNavigation, setCurrentFloor);
+        navigationTestAll(objects, 0, delay, navigation, setNavigation, setCurrentFloor, currentFloor);
         return;
       } else {
         setIsInputInvalid(true);
         return;
       }
     }
-    navigateToObject(matchingObject.name, navigation, setNavigation, setCurrentFloor);
+    navigateToObject(matchingObject.name, navigation, setNavigation, setCurrentFloor, currentFloor);
     setSelectedIndex(-1);
   }
 

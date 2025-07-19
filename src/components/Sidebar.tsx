@@ -51,7 +51,7 @@ function Sidebar() {
     setIsEditMode(false);
     if (!object) return;
     console.log(object);
-    navigateToObject(object.name, navigation, setNavigation, setCurrentFloor);
+    navigateToObject(object.name, navigation, setNavigation, setCurrentFloor, currentFloor);
   }
 
   return (

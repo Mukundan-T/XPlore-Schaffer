@@ -47,7 +47,7 @@ function IndoorMapWrapper() {
 
   function handleNavigationClick() {
     setModalOpen(false);
-    navigateToObject(object.name, navigation, setNavigation, setCurrentFloor);
+    navigateToObject(object.name, navigation, setNavigation, setCurrentFloor, currentFloor);
   }
   return (
     <div className="relative w-full h-full bg-white center">

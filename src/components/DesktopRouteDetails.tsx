@@ -3,7 +3,7 @@ import { FaX } from "react-icons/fa6";
 import { TbRoute } from "react-icons/tb";
 
 function DesktopRouteDetails() {
-  const { object, rightRouteLength, walkingTime, handleLeave } =
+  const { object, handleLeave } =
     useRouteDetails();
 
   return (

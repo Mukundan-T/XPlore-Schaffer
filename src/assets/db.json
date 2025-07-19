@@ -289,6 +289,13 @@
       "floor": "floor0"
     },
     {
+      "id": "filmEditRoom",
+      "categoryId": "resource",
+      "name": "Film Editing Room",
+      "desc": "TBA",
+      "floor": "floor0"
+    },
+    {
       "id": "law",
       "categoryId": "stacks",
       "name": "Stacks (K)",
@@ -345,16 +352,9 @@
       "floor": "floor0"
     },
     {
-      "id": "microformsAndPrinter",
+      "id": "microformsAndReader",
       "categoryId": "resource",
-      "name": "Microfilms & Microfilm Printer",
-      "desc": "TBA",
-      "floor": "floor0"
-    },
-    {
-      "id": "moreMicrofilms",
-      "categoryId": "resource",
-      "name": "More Microfilms",
+      "name": "Microfilm & Microfilm Reader",
       "desc": "TBA",
       "floor": "floor0"
     },
