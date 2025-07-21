@@ -13,20 +13,22 @@ import {
 import Sidebar from "@/components/Sidebar";
 import { FloorProvider } from "@/context/FloorContext";
 //import { startPosition } from "@/components/getDefaultPos";
-//import { getDefaultPos } from "@/components/getDefaultPos";
+import { getDefaultPos } from "@/components/getDefaultPos";
 
 export const NavigationContext = createContext<NavigationContextType | null>(
   null
 );
 
 export const MapDataContext = createContext<MapDataContextType | null>(null);
+export const startPos = getDefaultPos();
 
 function Map() {
   let [searchParams, setSearchParams] = useSearchParams();
-  const defaultPosition = "v199";
-  const startPosition = searchParams.get("position") || defaultPosition;
+  //const defaultPosition = "v199";
+  //const startPosition = searchParams.get("position") || defaultPosition;
+  //const startPos = getDefaultPos();
   const [navigation, setNavigation] = useState<Navigation>({
-    start: startPosition,
+    start: startPos, // startPosition,
     end: "",
     avoidStairs: false,
   });
@@ -63,8 +65,6 @@ function Map() {
     </MapDataContext.Provider>
   );
 }
-
-//export const startPos = startPosition;
 
 export default function MapWithFloor() {
   return (
