@@ -4,16 +4,17 @@ import { NavigationContext } from "@/pages/Map";
 import { NavigationContextType } from "@/utils/types";
 import { useContext } from "react";
 import { resetEdges } from "@/utils/navigationHelper";
-import { startPos } from "@/pages/Map";
+import { getInitialStartLocation } from "@/store/startPosition";
 
 function ResetPos() {
     const { setNavigation } = useContext(NavigationContext) as NavigationContextType;
     
     function resetToDefaultPosition() {
-        // const defaultStart = "v199";
+        const defaultStart = "v199";
+        const startPos = getInitialStartLocation();
         resetEdges(setNavigation);
         setNavigation({
-        start: startPos, //defaultStart,
+        start: startPos || defaultStart,
         end: "",
         avoidStairs: false,
         floorPaths: {},

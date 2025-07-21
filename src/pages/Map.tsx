@@ -12,23 +12,20 @@ import {
 } from "../utils/types";
 import Sidebar from "@/components/Sidebar";
 import { FloorProvider } from "@/context/FloorContext";
-//import { startPosition } from "@/components/getDefaultPos";
-import { getDefaultPos } from "@/components/getDefaultPos";
+import { setInitialStartLocation } from "@/store/startPosition";
 
 export const NavigationContext = createContext<NavigationContextType | null>(
   null
 );
 
 export const MapDataContext = createContext<MapDataContextType | null>(null);
-export const startPos = getDefaultPos();
 
 function Map() {
   let [searchParams, setSearchParams] = useSearchParams();
-  //const defaultPosition = "v199";
-  //const startPosition = searchParams.get("position") || defaultPosition;
-  //const startPos = getDefaultPos();
+  const defaultPosition = "v199";
+  const startPosition = searchParams.get("position") || defaultPosition;
   const [navigation, setNavigation] = useState<Navigation>({
-    start: startPos, // startPosition,
+    start: startPosition,
     end: "",
     avoidStairs: false,
   });
@@ -40,6 +37,10 @@ function Map() {
     isEditMode,
     setIsEditMode,
   };
+
+  useEffect(() => {
+    setInitialStartLocation(startPosition);
+  }, [navigation.start]);
 
   useEffect(() => {
     setSearchParams({ position: navigation.start });
