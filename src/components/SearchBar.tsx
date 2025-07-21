@@ -136,6 +136,7 @@ function SearchBar() {
         return;
       }
     }
+    // Could be place to increment a counter for user clicks - search bar
     navigateToObject(matchingObject.name, navigation, setNavigation, setCurrentFloor, currentFloor);
     setSelectedIndex(-1);
   }
