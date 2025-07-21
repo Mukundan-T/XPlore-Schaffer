@@ -5,7 +5,7 @@ import { isDesktop } from "react-device-detect";
 import EditPositionButton from "./EditPositionButton";
 import DesktopRouteDetails from "./DesktopRouteDetails";
 import SearchBar from "./SearchBar";
-import DefaultPos from "./DefaultPos";
+import DefaultPos from "./ResetPos";
 import AvoidStairs from "./AvoidStairs";
 
 function Toolbar() {
