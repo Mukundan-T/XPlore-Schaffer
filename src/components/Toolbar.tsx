@@ -5,7 +5,7 @@ import { isDesktop } from "react-device-detect";
 import EditPositionButton from "./EditPositionButton";
 import DesktopRouteDetails from "./DesktopRouteDetails";
 import SearchBar from "./SearchBar";
-import DefaultPos from "./ResetPos";
+import ResetPos from "./ResetPos";
 import AvoidStairs from "./AvoidStairs";
 
 function Toolbar() {
@@ -15,7 +15,7 @@ function Toolbar() {
     <div className="flex space-x-2 mb-4 h-12 items-center relative">
       <SearchBar />
       <EditPositionButton />
-      <DefaultPos />
+      <ResetPos />
       <div className="w-0.2" />  {/* Adds extra horizontal space */}
       <AvoidStairs />
 
