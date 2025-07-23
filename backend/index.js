@@ -40,7 +40,7 @@ if (!fs.existsSync(searchFile)) {
   fs.writeFileSync(searchFile, JSON.stringify([]));
 }
 
-// Store search data
+// POST /searches — Save a search
 app.post("/searches", (req, res) => {
   const search = req.body;
 
@@ -63,6 +63,13 @@ app.post("/searches", (req, res) => {
       res.status(200).send("Search saved");
     });
   });
+});
+
+// GET /searches — See all searches
+app.get("/searches", (req, res) => {
+  const data = fs.readFileSync("searches.json", "utf8");
+  const searches = JSON.parse(data);
+  res.json(searches);
 });
 
 app.listen(PORT, () => {
