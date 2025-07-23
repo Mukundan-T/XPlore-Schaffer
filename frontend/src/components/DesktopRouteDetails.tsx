@@ -12,10 +12,10 @@ function DesktopRouteDetails() {
         <div className="w-12 h-12 center flex-none rounded-l text-blue-500 text-xl">
           <TbRoute />
         </div>
-        <div className="flex flex-col max-w-52 h-full justify-center break-word">
+        <div className="flex flex-col max-w-32 h-full justify-center break-word">
           <p className="text-gray-900 text-sm font-semibold">{object?.name}</p>
         </div>
-        <div className="flex flex-col h-full justify-center px-4">
+        <div className="flex flex-col h-full justify-center px-2">
         </div>
         <div className="h-12 w-12 center flex-none rounded-r bg-white text-blue-500 text-xs">
           <button

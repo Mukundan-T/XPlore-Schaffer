@@ -19,7 +19,7 @@ function AvoidStairs() {
   };
 
   return (
-    <div className="px-3 py-3.5 border border-gray-300 rounded bg-white shadow-sm flex items-center space-x-2">
+    <div className="px-3 py-3.5 border border-gray-200 rounded bg-white flex items-center space-x-2">
       <input
         type="checkbox"
         id="avoidStairs"
@@ -34,14 +34,3 @@ function AvoidStairs() {
 }
 
 export default AvoidStairs;
-
-/**
- * const handleAvoidStairsToggle = () => {
-    setNavigation((prev) => ({
-      ...prev,
-      avoidStairs: !prev.avoidStairs,
-      end: "",
-      floorPaths: {},
-    }));
-  };
- */

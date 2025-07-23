@@ -182,7 +182,7 @@ function SearchBar() {
       <div className="flex flex-inline rounded w-full">
         <div className="h-12 w-12 center flex-none rounded-l bg-white text-blue-500 text-[8px] ">
           <div className="w-full h-8 center border-gray-300 border-r">
-            <FiCircle />
+            <FiCircle size={10}/>
           </div>
         </div>
         <div className="flex w-full relative">
@@ -239,7 +239,7 @@ function SearchBar() {
               onClick={() => handleSearch(inputValue)}
               aria-label="search"
             >
-              <FiNavigation />
+              <FiNavigation size={20}/>
             </button>
           </Tooltip>
         </div>

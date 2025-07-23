@@ -27,7 +27,7 @@ function EditPositionButton() {
         onClick={() => handleEdit()}
         aria-label="change position"
       >
-        <MdEditLocationAlt />
+        <MdEditLocationAlt size={20} />
       </button>
     </Tooltip>
   );

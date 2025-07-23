@@ -6,6 +6,7 @@ import EditPositionButton from "./EditPositionButton";
 import DesktopRouteDetails from "./DesktopRouteDetails";
 import SearchBar from "./SearchBar";
 import ResetPos from "./ResetPos";
+import Help from "./Help";
 import AvoidStairs from "./AvoidStairs";
 
 function Toolbar() {
@@ -16,9 +17,9 @@ function Toolbar() {
       <SearchBar />
       <EditPositionButton />
       <ResetPos />
+      <Help />
       <div className="w-0.2" />  {/* Adds extra horizontal space */}
       <AvoidStairs />
-
       {navigation.end && isDesktop && <DesktopRouteDetails />}
     </div>
   );

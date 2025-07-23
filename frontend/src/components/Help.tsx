@@ -1,0 +1,60 @@
+import { useState } from "react";
+import { BsQuestionCircle } from "react-icons/bs";
+import Tooltip from "./ui/Tooltip";
+import { Dialog, DialogBody, DialogHeader } from "./ui/Dialog";
+
+function Help() {
+  const [open, setOpen] = useState(false);
+  const toggle = () => setOpen(!open);
+
+  return (
+    <>
+    <Tooltip content="Need Help?" className="bg-green-500">
+      <button
+        onClick={toggle}
+        className="ml-1 h-12 w-12 bg-green-500 center rounded text-white"
+      >
+        <BsQuestionCircle />
+      </button>
+    </Tooltip>
+
+      <Dialog open={open} handler={toggle}>
+        <DialogHeader>Web Guide</DialogHeader>
+        <DialogBody>
+          <ul className="text-md text-gray-700 list-disc ml-4 space-y-2">
+            {/* <li><strong>Select Floor:</strong> Switch between library floors.</li>
+
+            <li><strong>Search:</strong> Search a place in the library to find the best route from your
+            start location (indicated by the blue dot).</li>
+
+            <li><strong>Avoid Stairs:</strong> Route will avoid stairs in multi-floor routes.</li> */}
+
+            <li className="flex items-center list-disc gap-3">
+              <img
+                src="/button_images/Edit_Position.png"
+                alt="Edit position button"
+                className="w-10 h-10 rounded border"
+                draggable={false}
+              />
+              <span><strong> Edit Position:</strong> Change your starting location on the map, even to a spot 
+            on a different floor.</span>
+            </li>
+
+            <li className="flex items-center gap-3">
+              <img
+                src="/button_images/Reset_Position.png"
+                alt="Reset position button"
+                className="w-10 h-10 rounded border"
+                draggable={false}
+              />
+              <span><strong> Reset Position:</strong> Reset your start location to here.</span>
+            </li>
+
+          </ul>
+        </DialogBody>
+      </Dialog>
+    </>
+  );
+}
+
+export default Help;
