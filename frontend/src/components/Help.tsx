@@ -31,7 +31,7 @@ function Help() {
 
             <li className="flex items-center list-disc gap-3">
               <img
-                src="/button_images/Edit_Position.png"
+                src="/images/Edit_Position.png"
                 alt="Edit position button"
                 className="w-10 h-10 rounded border"
                 draggable={false}
@@ -42,7 +42,7 @@ function Help() {
 
             <li className="flex items-center gap-3">
               <img
-                src="/button_images/Reset_Position.png"
+                src="/images/Reset_Position.png"
                 alt="Reset position button"
                 className="w-10 h-10 rounded border"
                 draggable={false}
