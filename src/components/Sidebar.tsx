@@ -9,6 +9,8 @@ import {
 import { MapDataContext, NavigationContext } from "../pages/Map";
 import { navigateToObject } from "@/utils/navigationHelper";
 import { useFloor } from "@/context/FloorContext";
+import apiService from "@/services/apiService";
+import { getCurrentLocation } from "@/store/currentLocation";
 
 interface ParsedObjects {
   [key: string]: {
@@ -46,11 +48,21 @@ function Sidebar() {
     groupedObjects();
   }, [objects]);
 
-  function handleObjectNavigation(selectedObjectName: string) {
+  async function handleObjectNavigation(selectedObjectName: string) {
     const object = objects.find((obj) => obj.name === selectedObjectName);
     setIsEditMode(false);
     if (!object) return;
     console.log(object);
+    try {
+      // Log search to the backend
+        await apiService.post("/searches", {
+          query: object.name,
+          userLocation: getCurrentLocation()
+        });
+      }
+      catch (err) {
+        console.error("Error logging search:", err);
+      }
     navigateToObject(object.name, navigation, setNavigation, setCurrentFloor, currentFloor);
   }
 

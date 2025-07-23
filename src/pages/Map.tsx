@@ -12,7 +12,8 @@ import {
 } from "../utils/types";
 import Sidebar from "@/components/Sidebar";
 import { FloorProvider } from "@/context/FloorContext";
-import { setInitialStartLocation } from "@/store/startPosition";
+import { setDefaultLocation } from "@/store/defaultPosition";
+import { setCurrentLocation } from "@/store/currentLocation";
 
 export const NavigationContext = createContext<NavigationContextType | null>(
   null
@@ -24,6 +25,7 @@ function Map() {
   let [searchParams, setSearchParams] = useSearchParams();
   const defaultPosition = "v199";
   const startPosition = searchParams.get("position") || defaultPosition;
+  setCurrentLocation(startPosition);
   const [navigation, setNavigation] = useState<Navigation>({
     start: startPosition,
     end: "",
@@ -39,8 +41,8 @@ function Map() {
   };
 
   useEffect(() => {
-    setInitialStartLocation(startPosition);
-  }, [navigation.start]);
+    setDefaultLocation(startPosition);
+  }, []);
 
   useEffect(() => {
     setSearchParams({ position: navigation.start });

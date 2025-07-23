@@ -1,6 +1,7 @@
 import db from "@/assets/db.json";
 import { Beacon, Category, ObjectItem } from "@/utils/types";
 import apiService from "./apiService";
+
 export async function getObjects(): Promise<ObjectItem[]> {
   try {
     const response = await apiService.get("/objects");
@@ -86,6 +87,10 @@ export async function updateCategory(
     console.error(`Error updating category with ID ${id}:`, error);
     throw error;
   }
+}
+
+export function logClick(id: string) {
+  return apiService.post("/clicks", { id });
 }
 
 export async function getBeacon(): Promise<Beacon[]> {

@@ -14,6 +14,9 @@ import ObjectDetailsModal from "./Modals/ObjectDetailsModal";
 import { navigateToObject } from "@/utils/navigationHelper";
 import { toast } from "react-toastify";
 import { useFloor } from "@/context/FloorContext";
+import apiService from "@/services/apiService";
+import { logClick } from "@/services/mapServices";
+import { getCurrentLocation } from "@/store/currentLocation";
 
 function IndoorMapWrapper() {
   const [modalOpen, setModalOpen] = useState(false);
@@ -31,12 +34,14 @@ function IndoorMapWrapper() {
       const selectedObject = objects.find((obj) => obj.name === targetId);
       if (selectedObject?.id) {
         setObject(selectedObject);
+        logClick(targetId);
         setModalOpen(true);
       } else {
         toast.error("Object not found");
       }
     }
   }
+  
   const handlePositionClick = (e: React.MouseEvent<SVGPathElement>) => {
     if (isEditMode) {
       const vertexId = (e.target as HTMLElement).id;
@@ -45,8 +50,18 @@ function IndoorMapWrapper() {
     }
   };
 
-  function handleNavigationClick() {
+  async function handleNavigationClick() {
     setModalOpen(false);
+    try {
+      // Log search to the backend
+        await apiService.post("/searches", {
+          query: object.name,
+          userLocation: getCurrentLocation()
+        });
+      }
+      catch (err) {
+        console.error("Error logging search:", err);
+      }
     navigateToObject(object.name, navigation, setNavigation, setCurrentFloor, currentFloor);
   }
   return (

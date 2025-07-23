@@ -13,6 +13,8 @@ import {
   ObjectItem,
 } from "../utils/types";
 import { useFloor } from "@/context/FloorContext";
+import apiService from "@/services/apiService";
+import { getCurrentLocation } from "@/store/currentLocation";
 
 function SearchBar() {
   const [inputValue, setInputValue] = useState<string>("");
@@ -43,18 +45,40 @@ function SearchBar() {
     }
   });
 
+  function removeDuplicates(
+      arr: any[],
+      key: string
+  ): any[] {
+      return arr.reduce((unique, item) => {
+          // Check if the current object has the specified key
+          if (item.hasOwnProperty(key)) {
+              // Check if there is no existing object with the same key value
+              if (!unique.some((obj: { [x: string]: any; }) => obj[key] === item[key])) {
+                  unique.push(item);
+              }
+          } else {
+              // If the key doesn't exist in the current object, always include it in the unique array
+              unique.push(item);
+          }
+          return unique;
+      }, []);
+  }
+
   function handleInputChange(event: React.ChangeEvent<HTMLInputElement>) {
     const value = event.target.value;
     setInputValue(value);
     if (value) {
       setIsAutocomplete(true);
+
       const filteredNames = objects.filter((obj) =>
         obj.name.toLowerCase().includes(value.trim().toLowerCase())
       );
       const filteredDescs = objects.filter((obj) =>
         obj.desc.toLowerCase().includes(value.trim().toLowerCase())
       );
-      const filteredSuggestions: ObjectItem[] = filteredNames.concat(filteredDescs);
+      const allSuggestions: ObjectItem[] = filteredNames.concat(filteredDescs);
+      const filteredSuggestions = removeDuplicates(allSuggestions, "name");
+
       setSuggestions(filteredSuggestions);
     } else {
       setIsAutocomplete(false);
@@ -121,11 +145,26 @@ function SearchBar() {
     setSelectedIndex(-1);
   }
 
-  function handleSearch(inputValue: string) {
+  async function handleSearch(inputValue: string) {
     const matchingObject = objects.find(
       (obj) => obj.name.toLowerCase() === inputValue.trim().toLowerCase()
     );
-    if (!matchingObject) {
+    if (matchingObject) {
+      // Could be place to increment a counter for user clicks - search bar
+      try {
+      // Log search to the backend
+        await apiService.post("/searches", {
+          query: matchingObject.name,
+          userLocation: getCurrentLocation()
+        });
+      }
+      catch (err) {
+        console.error("Error logging search:", err);
+      }
+      navigateToObject(matchingObject.name, navigation, setNavigation, setCurrentFloor, currentFloor);
+      setSelectedIndex(-1);
+    }
+    else {
       //? To test the navigation feature
       if (inputValue === "Test") {
         const delay = 500;
@@ -136,9 +175,6 @@ function SearchBar() {
         return;
       }
     }
-    // Could be place to increment a counter for user clicks - search bar
-    navigateToObject(matchingObject.name, navigation, setNavigation, setCurrentFloor, currentFloor);
-    setSelectedIndex(-1);
   }
 
   return (

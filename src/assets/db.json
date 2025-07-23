@@ -60,14 +60,14 @@
     {
       "id": "PBK",
       "name": "Phi Beta Kappa (PBK) Room",
-      "desc": "Used for classes held in the library or other meetings.",
+      "desc": "Used for classes or meetings held in the library.",
       "floor": "floor2"
     },
     {
       "id": "acomServ",
       "categoryId": "resource",
       "name": "Accommodative Services",
-      "desc": "Aids students with accommodations for testing and classes; schedule an appointment or reach out via email!",
+      "desc": "Aids students with accommodations for testing and classes; Schedule an appointment or reach out via email!",
       "floor": "floor2"
     },
     {
@@ -186,7 +186,7 @@
       "id": "its",
       "categoryId": "resource",
       "name": "Information Technology Services (ITS)",
-      "desc": "Serves as the initial point of contact for individuals needing technical support; provides assistance with IT-related issues and requests, often acting as a triage point before escalating complex problems to specialized IT support teams.",
+      "desc": "Serves as the initial point of contact for technical support; provides assistance with IT-related issues and requests, often acting as a triage point before escalating complex problems to specialized IT support teams.",
       "floor": "floor1"
     },
     {

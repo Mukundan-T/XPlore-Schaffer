@@ -6,6 +6,7 @@ import { graphData } from "@/store/graphData";
 import { toast } from "react-toastify";
 import { rebuildGraph } from "@/algorithms/dijkstra";
 import { showFloorSwitchToast } from "./showFloorSwitchToast";
+import { setCurrentLocation } from "@/store/currentLocation";
 export let routeLength = 0;
 
 // Finds a vertex in the graph that corresponds to a given object name.
@@ -37,6 +38,7 @@ export function navigateToObject(
   // Locate the starting vertex
   const startVertex = graphData.vertices.find((v) => v.id === navigation.start);
   if (!startVertex) return;
+  setCurrentLocation(startVertex.id);
 
   // Object to store individual path segments for each floor
   const perFloorPaths: Record<string, string> = {};
