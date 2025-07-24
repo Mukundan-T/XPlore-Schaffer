@@ -11,25 +11,17 @@ function formatFloorLabel(floor: string) {
   }
 }
 
-function switchFloor(startFloor: string, endFloor: string, viewedFloor: string) {
-  if (startFloor === viewedFloor) {
-    return endFloor;
-  }
-  return startFloor;
-}
-
 export function showFloorSwitchToast(
   nextFloor: string, 
-  setCurrentFloor: (floor: string) => void, 
-  startFloor: string,
-  screenFloor: string)
+  setCurrentFloor: (floor: string) => void
+  )
 {
   toast.info(
     <div className="flex flex-col space-y-1">
       <span> Continue on {formatFloorLabel(nextFloor)}</span>
       <button
         onClick={() => {
-          setCurrentFloor(switchFloor(startFloor, nextFloor, screenFloor))
+          setCurrentFloor(nextFloor)
           toast.dismiss();
         }}
         className="mt-1 text-xs bg-blue-600 hover:bg-blue-700 text-white px-3 py-1 rounded"

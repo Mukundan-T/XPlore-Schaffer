@@ -15,6 +15,7 @@ import {
 import { useFloor } from "@/context/FloorContext";
 import apiService from "@/services/apiService";
 import { getCurrentLocation } from "@/store/currentLocation";
+import { toast } from "react-toastify";
 
 function SearchBar() {
   const [inputValue, setInputValue] = useState<string>("");
@@ -161,6 +162,7 @@ function SearchBar() {
       catch (err) {
         console.error("Error logging search:", err);
       }
+      toast.dismiss();
       navigateToObject(matchingObject.name, navigation, setNavigation, setCurrentFloor, currentFloor);
       setSelectedIndex(-1);
     }

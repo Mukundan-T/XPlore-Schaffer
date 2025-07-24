@@ -6,6 +6,7 @@ import {
   ObjectItem,
 } from "@/utils/types";
 import { resetEdges } from "@/utils/navigationHelper";
+import { toast } from "react-toastify";
 
 export function useRouteDetails() {
   const { objects } = useContext(MapDataContext) as MapDataContextType;
@@ -52,6 +53,7 @@ export function useRouteDetails() {
 
   function handleLeave() {
     resetEdges(setNavigation);
+    toast.dismiss();
     setNavigation((prevNavigation) => ({
       ...prevNavigation,
       end: "",

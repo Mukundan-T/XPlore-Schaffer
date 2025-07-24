@@ -11,6 +11,7 @@ import { navigateToObject } from "@/utils/navigationHelper";
 import { useFloor } from "@/context/FloorContext";
 import apiService from "@/services/apiService";
 import { getCurrentLocation } from "@/store/currentLocation";
+import { toast } from "react-toastify";
 
 interface ParsedObjects {
   [key: string]: {
@@ -63,6 +64,7 @@ function Sidebar() {
       catch (err) {
         console.error("Error logging search:", err);
       }
+    toast.dismiss();
     navigateToObject(object.name, navigation, setNavigation, setCurrentFloor, currentFloor);
   }
 

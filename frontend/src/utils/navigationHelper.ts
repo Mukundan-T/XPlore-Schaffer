@@ -55,15 +55,8 @@ export function navigateToObject(
 
     // If the current vertex is on a different floor, start a new path segment
     if (currVertex.floor !== startFloor) {
-
-      // Toast to notify floor change
-      if (currentFloor === startFloor || currentFloor === currVertex.floor) { // change
-        showFloorSwitchToast(currVertex.floor, setCurrentFloor, startFloor, currentFloor); // show button toast
-      }
-
       // Save the completed path for the current floor
       perFloorPaths[startFloor] = pathSegment;
-      
       // Start a new path segment for the next floor
       pathSegment = `M${currVertex.cx} ${currVertex.cy}`;
       startFloor = currVertex.floor;
@@ -71,7 +64,6 @@ export function navigateToObject(
       // No floor change — continue appending normally
       pathSegment += ` L${currVertex.cx} ${currVertex.cy}`;
     }
-
   }
 
   // Save the final floor segment
@@ -82,10 +74,12 @@ export function navigateToObject(
   // Update the SVG path element on screen for the current floor.
   const navigationRoutePath = document.getElementById("navigation-route");
 
-  // Change floor if user viewing neither the start or end floor
-  if (currentFloor !== newStartFloor && currentFloor !== endFloor) {
+  // Change floor if user not viewing the start floor
+  if (currentFloor !== newStartFloor) {
     setCurrentFloor(newStartFloor);
-    showFloorSwitchToast(endFloor, setCurrentFloor, startFloor, currentFloor); // show button toast
+  }
+  if (newStartFloor !== endFloor) {
+    showFloorSwitchToast(endFloor, setCurrentFloor); // show button toast
   }
 
   if (navigationRoutePath && perFloorPaths[endFloor]) {

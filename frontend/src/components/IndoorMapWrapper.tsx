@@ -62,6 +62,7 @@ function IndoorMapWrapper() {
       catch (err) {
         console.error("Error logging search:", err);
       }
+    toast.dismiss();
     navigateToObject(object.name, navigation, setNavigation, setCurrentFloor, currentFloor);
   }
   return (

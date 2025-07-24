@@ -194,13 +194,13 @@ export const graphData: GraphData = {
     { id: "v196", objectName: "Gateway", floor: "floor1", cx: 1180.0437, cy: 490.96579 },
     { id: "v197", objectName: "Gateway", floor: "floor1", cx: 1180.0437, cy: 534.56128 },
     { id: "v198", objectName: null, floor: "floor1", cx: 1218.0045, cy: 534.56128 },
-    { id: "v199", objectName: null, floor: "floor1", cx: 1072.1787, cy: 929.30115 },
+    { id: "v199", objectName: null, floor: "floor1", cx: 1072.1787, cy: 929.30115 }, // default
     { id: "v200", objectName: "Stairs", floor: "floor1", connectedTo: ["v298"], cx: 1134.865, cy: 276.58398 },
 
     /*** BASEMENT NODES - numbers 231-330 reserved for flexibility ***/
     { id: "v231", objectName: "Stairs", floor: "floor0",  connectedTo: ["v134"], cx: 1166.75, cy: 1067.7031 },
     { id: "v232", objectName: null, floor: "floor0", cx: 1166.75, cy: 1044.2876 },
-    { id: "v233", objectName: "Gateway", floor: "floor0", cx: 1131.6577, cy: 1044.2876 },
+    { id: "v233", objectName: null, floor: "floor0", cx: 1131.6577, cy: 1044.2876 }, // default
     { id: "v234", objectName: null, floor: "floor0", cx: 1039.0625, cy: 1044.2876 },
     { id: "v235", objectName: "Study Rooms", floor: "floor0", cx: 1039.0625, cy: 1125.8907 },
     { id: "v236", objectName: "Elevator", floor: "floor0", connectedTo: ["v136"], cx: 913.25, cy: 1030.6875 },

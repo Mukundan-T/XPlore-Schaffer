@@ -221,7 +221,7 @@
       "id": "bloomberg",
       "categoryId": "resource",
       "name": "Bloomberg",
-      "desc": "Computer system for real-time financial data analysis, trading, and news, and free access to the Bloomberg Market Concepts course and certification.",
+      "desc": "A computer system for real-time financial data analysis, trading, and news. There is free access to the Bloomberg Market Concepts course and certification.",
       "floor": "floor1"
     },
     {
@@ -320,7 +320,7 @@
       "id": "geoAnthroRec",
       "categoryId": "stacks",
       "name": "Stacks (G)",
-      "desc": "Geography, Anthropology, and Recreation section",
+      "desc": "Geography, Anthropology, Dance, and Sports section",
       "floor": "floor0"
     },
     {
@@ -383,7 +383,7 @@
       "id": "TtoZ",
       "categoryId": "stacks",
       "name": "Stacks (T-Z)",
-      "desc": "Includes technology, military science, naval science, and bibliography (industry and trade, information resources, libraries, paleography, and writing).",
+      "desc": "Includes technology, photography, military science, naval science, and bibliography (industry and trade, information resources, libraries, paleography, and writing).",
       "floor": "floor0"
     },
     {
