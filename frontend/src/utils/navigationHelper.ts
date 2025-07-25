@@ -1,10 +1,10 @@
 import { Dispatch, SetStateAction } from "react";
-import { graph } from "../algorithms/dijkstra";
+import { graph } from "../algorithms/aStar";
 import { Navigation, NavigationContextType } from "./types";
 import { ObjectItem } from "./types";
 import { graphData } from "@/store/graphData";
 import { toast } from "react-toastify";
-import { rebuildGraph } from "@/algorithms/dijkstra";
+import { rebuildGraph } from "@/algorithms/aStar";
 import { showFloorSwitchToast } from "./showFloorSwitchToast";
 import { setCurrentLocation } from "@/store/currentLocation";
 export let routeLength = 0;
@@ -32,7 +32,7 @@ export function navigateToObject(
   graph.avoidStairs = navigation.avoidStairs ?? false;
   rebuildGraph(graph.avoidStairs);
 
-  // Calculate the shortest path from current start to target using Dijkstra
+  // Calculate the shortest path from current start to target using A*
   const shortestPath = graph.calculateShortestPath(navigation.start, target.id);
 
   // Locate the starting vertex

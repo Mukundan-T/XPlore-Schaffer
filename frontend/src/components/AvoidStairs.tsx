@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { NavigationContext } from "@/pages/Map";
 import { NavigationContextType } from "@/utils/types";
+import { toast } from "react-toastify";
 
 /**
  * Checkbox for toggling the "Avoid Stairs" navigation option.
@@ -10,6 +11,7 @@ function AvoidStairs() {
   const { navigation, setNavigation } = useContext(NavigationContext) as NavigationContextType;
 
   const handleToggle = () => {
+    toast.dismiss();
     setNavigation((prev) => ({
       ...prev,
       avoidStairs: !prev.avoidStairs,
