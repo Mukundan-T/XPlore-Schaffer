@@ -1,3 +1,7 @@
+/**
+ * This module defines the animation for the fading in and out of an object modal on the website.
+ */
+
 import React, { useEffect, useRef, useState } from "react";
 
 interface DialogProps {

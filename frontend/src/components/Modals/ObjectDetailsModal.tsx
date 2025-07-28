@@ -1,3 +1,9 @@
+/**
+ * This module combines all of the modal files and enables the creating and editing
+ * of new modals, and displaying existing modals on the website. However, the former
+ * functions are dysfunctional due to the nonexistence of an API and backend.
+ */
+
 import { MapDataContext } from "@/pages/Map";
 import { MapDataContextType, ObjectItem } from "@/utils/types";
 import { useContext, useState } from "react";

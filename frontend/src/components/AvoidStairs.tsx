@@ -1,3 +1,8 @@
+/**
+ * Implements a checkbox for avoiding stairs on the toolbar. When toggled, the route will
+ * only choose elevators to traverse different floors.
+ */
+
 import { useContext } from "react";
 import { NavigationContext } from "@/pages/Map";
 import { NavigationContextType } from "@/utils/types";

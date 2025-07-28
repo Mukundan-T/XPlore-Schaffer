@@ -1,3 +1,7 @@
+/**
+ * This module deals with the toast message that appears to switch the floor.
+ */
+
 import { toast } from "react-toastify";
 
 // Return the correct floor to switch to.

@@ -1,3 +1,8 @@
+/**
+ * This module contains the wayfinding algorithm's logic, which finds the
+ * shortest path from one location to another using the A* algorithm.
+ */
+
 // Import the graph structure which contains vertices and edges of the map
 import { graphData, VertexData } from "@/store/graphData";
 

@@ -1,3 +1,8 @@
+/**
+ * This module is related to the creation of new modals and editing them, but is
+ * currently dysfunctional.
+ */
+
 import { MapDataContext } from "@/pages/Map";
 import { MapDataContextType, ObjectItem } from "@/utils/types";
 import { useContext } from "react";

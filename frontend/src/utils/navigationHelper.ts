@@ -1,3 +1,10 @@
+/**
+ * This module handles the building of the route from start to end and animating the route.
+ * Also, it displays a message to switch floor if the route is across multiple floors. If the
+ * user is viewing an unrelated floor when starting the route, they will be directed to the
+ * correct start floor.
+ */
+
 import { Dispatch, SetStateAction } from "react";
 import { graph } from "../algorithms/aStar";
 import { Navigation, NavigationContextType } from "./types";

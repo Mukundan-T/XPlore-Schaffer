@@ -1,3 +1,8 @@
+/**
+ * This module is used to get the current floor that the user visually sees on the screen
+ * at any given time the application is running.
+ */
+
 import React, { createContext, useContext, useState } from "react";
 
 type FloorContextType = {

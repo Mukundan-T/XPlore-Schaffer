@@ -1,3 +1,8 @@
+/**
+ * The main module that sets up the website. Sets up the sidebar, toolbar, the map view on the
+ * website, and initializes the start position.
+ */
+
 import IndoorMapWrapper from "@/components/IndoorMapWrapper";
 import MobileRouteDetails from "@/components/MobileRouteDetails";
 import Toolbar from "@/components/Toolbar";

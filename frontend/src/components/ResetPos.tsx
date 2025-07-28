@@ -1,3 +1,7 @@
+/**
+ * Resets the position to the default start location as specified in the URL.
+ */
+
 import { MdMyLocation } from "react-icons/md";
 import Tooltip from "./ui/Tooltip";
 import { NavigationContext } from "@/pages/Map";
@@ -10,15 +14,15 @@ function ResetPos() {
     const { setNavigation } = useContext(NavigationContext) as NavigationContextType;
     
     function resetToDefaultPosition() {
-        const defaultStart = "v199";
-        const startPos = getDefaultLocation();
-        resetEdges(setNavigation);
-        setNavigation({
-        start: startPos || defaultStart,
-        end: "",
-        avoidStairs: false,
-        floorPaths: {},
-        });
+      const defaultStart = "v199";
+      const startPos = getDefaultLocation();
+      resetEdges(setNavigation);
+      setNavigation({
+      start: startPos || defaultStart,
+      end: "",
+      avoidStairs: false,
+      floorPaths: {},
+      });
     }
 
   return (

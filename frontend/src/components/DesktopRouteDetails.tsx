@@ -1,3 +1,8 @@
+/**
+ * Displays a box with the destination name and animation to the right of the "Avoid Stairs"
+ * toggle on the toolbar when a route to a place is displayed - for a desktop website.
+ */
+
 import { useRouteDetails } from "@/hooks/useRouteDetails";
 import { FaX } from "react-icons/fa6";
 import { TbRoute } from "react-icons/tb";

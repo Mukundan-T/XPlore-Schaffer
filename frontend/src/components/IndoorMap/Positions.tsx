@@ -1,3 +1,14 @@
+/**
+ * This module figures out all the displaying and hiding of all of the different start positions
+ * on the maps. 
+ * 
+ * If the "Edit Position" button is toggled, all of the vertices with an object
+ * name of null will be displayed as small circles that can be clicked to switch the start
+ * position. 
+ * 
+ * This module also animates the current start location (the blue dot).
+ */
+
 import { graphData } from "@/store/graphData";
 import { NavigationContextType } from "@/utils/types";
 import { useFloor } from "@/context/FloorContext";

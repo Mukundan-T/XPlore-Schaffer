@@ -1,3 +1,7 @@
+/**
+ * This module contains all of the data related to vertices and edges on the maps.
+ */
+
 export interface VertexData {
   id: string;
   objectName: string | null;
@@ -20,9 +24,48 @@ export interface GraphData {
 }
 
 export const graphData: GraphData = {
+  /**
+   * Every vertex (aka node) is a point on the graph that is connected to other nodes,
+   * forming a network of edges that represent paths that people can travel in. In 
+   * essence, it's a "Connect the Dots" graph, but one where one dot can have multiple
+   * lines to and from itself. This is a list of every single node on the graph.
+   * 
+   * 
+   * Every node needs 5 required properties:
+   * 
+   * - ID: This is a node's unique identifier: a string with a "v" followed
+   * by an integer. This integer is within a certain range (which is specified for each
+   * floor and large enough for abundance).
+   * 
+   * - Object Name: This can be a couple of different things:
+   * 
+   *     - The name of a room/resource (such as PBK room) if this node is the entry of
+   *     this area; if so, ***** this MUST MATCH the corresponding "id" in Objects.tsx 
+   *     and "name" in db.json that are entered for this particular area *****
+   *     - Either an elevator or stair (marked as "Elevator" or "Stairs")
+   *     - null - this means that this is a node that will appear when the "Edit Position"
+   *     button is toggled
+   *     - A "Gateway" - which means that this node is NOT an entry to any room AND will
+   *     not appear when the "Edit Position" button is toggled (it simply exists to shape
+   *     the graph and give nice right edges)
+   * 
+   * - Floor: This specifies which floor the node is on. ***** MUST be one of the following: 
+   * floor3, floor2, floor1, floor0 *****
+   * 
+   * - Cx: This is the x-coordinate of the node (obtained from the XML Editor in an image
+   * editor such as Inkscape)
+   * 
+   * - Cy: This is the y-coordinate of the node (obtained from the XML Editor in an image
+   * editor such as Inkscape)
+   * 
+   * 
+   * Additionally, a node that is an "Elevator" or "Stairs" needs 1 more property:
+   * 
+   * - Connected to: Specifies which other floors a node is connected to.
+   */
   vertices: [
 
-    /*** FLOOR 3 NODES - numbers 1-30 reserved for flexibility ***/
+    /*** FLOOR 3 NODES - numbers 1-30, 331-400 reserved for flexibility ***/
     { id: "v1", objectName: "Elevator", floor: "floor3", connectedTo: ["v31"], cx: 680.20404, cy: 1044.6479 },
     { id: "v2", objectName: null, floor: "floor3", cx: 680.20404, cy: 1056.9718 },
     { id: "v3", objectName: "Gateway", floor: "floor3", cx: 794.96173, cy: 1035.3198 },
@@ -45,7 +88,7 @@ export const graphData: GraphData = {
     { id: "v20", objectName: "Gateway", floor: "floor3", cx: 806.02362, cy: 1035.3198 },
     { id: "v21", objectName: "Gateway", floor: "floor3", cx: 781.5282, cy: 1035.3198 },
 
-    /*** FLOOR 2 NODES - numbers 31-130 reserved for flexibility ***/
+    /*** FLOOR 2 NODES - numbers 31-130, 401-500 reserved for flexibility ***/
     { id: "v31", objectName: "Elevator", floor: "floor2", connectedTo: ["v1", "v136"], cx: 936.68451, cy: 1056.0264 },
     { id: "v32", objectName: null, floor: "floor2", cx: 936.68451, cy: 1087.6313 },
     { id: "v33", objectName: "Gateway", floor: "floor2", cx: 982.06891, cy: 1087.6313 },
@@ -122,7 +165,7 @@ export const graphData: GraphData = {
     { id: "v107", objectName: "Gateway", floor: "floor2", cx: 997.74072, cy: 393.71844 },
     { id: "v108", objectName: "Additional Quiet Study Floor 2", floor: "floor2", cx: 997.74072, cy: 295.78464 },
 
-    /*** FLOOR 1 NODES - numbers 131-230 reserved for flexibility ***/
+    /*** FLOOR 1 NODES - numbers 131-230, 501-600 reserved for flexibility ***/
     { id: "v131", objectName: "Entrance", floor: "floor1", cx: 1030.8303, cy: 1077.2573 },
     { id: "v132", objectName: null, floor: "floor1", cx: 1030.8303, cy: 1036.1891 },
     { id: "v133", objectName: null, floor: "floor1", cx: 1164.0996, cy: 1036.1891 },
@@ -197,7 +240,7 @@ export const graphData: GraphData = {
     { id: "v199", objectName: null, floor: "floor1", cx: 1072.1787, cy: 929.30115 }, // default
     { id: "v200", objectName: "Stairs", floor: "floor1", connectedTo: ["v298"], cx: 1134.865, cy: 276.58398 },
 
-    /*** BASEMENT NODES - numbers 231-330 reserved for flexibility ***/
+    /*** BASEMENT NODES - numbers 231-330, 601-700 reserved for flexibility ***/
     { id: "v231", objectName: "Stairs", floor: "floor0",  connectedTo: ["v134"], cx: 1166.75, cy: 1067.7031 },
     { id: "v232", objectName: null, floor: "floor0", cx: 1166.75, cy: 1044.2876 },
     { id: "v233", objectName: null, floor: "floor0", cx: 1131.6577, cy: 1044.2876 }, // default
@@ -277,6 +320,26 @@ export const graphData: GraphData = {
     { id: "v303", objectName: "Film Editing Room", floor: "floor0", cx: 899.74921, cy: 1072.46 },
   ],
 
+  /**
+   * The edges are the lines that connect the nodes and which represent the available paths
+   * the shortest path from one point to another can go through. This is a list of every
+   * single edge on the graph.
+   * 
+   * 
+   * Every edge needs 4 required properties:
+   * 
+   * - ID: This specifies the edge connection, and is formatted as one vertex ID followed by
+   * "to" followed by another vertex ID (ex. v1_to_v2).
+   * 
+   * - From: This is one of the two IDs of vertices that an edge connects. For example, if
+   * an edge connects "v1" and "v2", then this can either be "v1" or "v2".
+   * 
+   * - To: This is the other vertex's ID that the edge connects (if "From" was "v1", then
+   * this would be "v2", and vice versa).
+   * 
+   * - Floor: This specifies which floor the edge is on. ***** MUST be one of the following: 
+   * floor3, floor2, floor1, floor0 *****
+   */
   edges: [
 
     /**

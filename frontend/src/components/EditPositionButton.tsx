@@ -1,3 +1,8 @@
+/**
+ * Handles the logic behind the "Edit Position" button - when toggled, the "null" vertices will be
+ * displayed and all routes displayed will be cleared.
+ */
+
 import { MdEditLocationAlt } from "react-icons/md";
 import Tooltip from "./ui/Tooltip";
 import { NavigationContext } from "@/pages/Map";

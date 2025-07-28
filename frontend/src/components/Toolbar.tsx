@@ -1,3 +1,8 @@
+/**
+ * Combine the search bar, edit position button, reset position button, help button, the avoid
+ * stairs toggle, and the route destination name to make a comprehensive toolbar.
+ */
+
 import { NavigationContext } from "@/pages/Map";
 import { NavigationContextType } from "@/utils/types";
 import { useContext } from "react";

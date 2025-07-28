@@ -1,3 +1,7 @@
+/*
+This file outlines a lot of styling related to the outlines, shaking of boxes, animations, etc.
+*/
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

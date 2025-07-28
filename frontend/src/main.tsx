@@ -1,3 +1,7 @@
+/**
+ * This is the file that starts the application in a secure browser.
+ */
+
 import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App.tsx";

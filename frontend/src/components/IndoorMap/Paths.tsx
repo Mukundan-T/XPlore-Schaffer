@@ -1,3 +1,8 @@
+/**
+ * This module constructs all the edges connecting the vertices for the floor being viewed on
+ * the screen (aka the paths).
+ */
+
 import { useFloor } from "@/context/FloorContext";
 import { useContext } from "react";
 import { NavigationContext } from "@/pages/Map";

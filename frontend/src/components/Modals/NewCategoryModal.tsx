@@ -1,3 +1,8 @@
+/**
+ * This module enables the creation of a new category, but I don't think it has any
+ * impact on the website right now due to the backend removal by the creator.
+ */
+
 import React from "react";
 import { Dialog, DialogBody, DialogHeader } from "../ui/Dialog";
 

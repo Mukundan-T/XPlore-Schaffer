@@ -1,3 +1,8 @@
+/**
+ * An unused file - perhaps to make some edits in an authorized mode? Will maybe
+ * be useful in the future.
+ */
+
 import { AdminContext } from "@/App";
 import { AdminContextType } from "@/utils/types";
 import { useContext } from "react";

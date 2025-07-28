@@ -1,4 +1,7 @@
-// useMapData.ts
+/**
+ * Access the objects and categories to use in other UI modules.
+ */
+
 import { useState, useEffect } from "react";
 import { getObjects, getCategories } from "../services/mapServices";
 import { Category, ObjectItem } from "@/utils/types";

@@ -1,3 +1,8 @@
+/**
+ * This module defines a bunch of interfaces and their properties, which is then imported
+ * wherever necessary.
+ */
+
 export interface ObjectItem {
   id: string;
   name: string;

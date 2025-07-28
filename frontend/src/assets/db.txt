@@ -1,0 +1,54 @@
+This file documents @/assets/db.
+
+The file db.json contains the information related to each room/resource/area in the library, where each
+room/resource is an object that falls into a category with the following properties:
+
+    - ID: can be anything, only to identify each object
+    - Category ID: This identifies which category the area falls into; it can be anything, but it has to
+    match the corresponding ID in the "categories" list at the bottom of the file.
+    - Name: The name of the area as it should appear on the website.
+        ***** This name MUST match the corresponding "id" in Objects.tsx and "objectName" in graphData.ts
+        under vertices that are entered for that particular area *****
+    - Description: This is a short description of the area, which will also be displayed on the website.
+    - Floor: This specifies which floor the area is on.
+        ***** MUST be one of the following: floor3, floor2, floor1, floor0 *****
+
+The ID, name, and floor are REQUIRED properties. The category ID and description are optional.
+
+The file is laid out as one list of objects, and another list of categories. The latter contains objects
+that specify the category in which an area falls into (ex. restrooms, resource, stacks, etc.). These
+category objects have two properties:
+
+    - ID: This can be anything, but HAS TO MATCH the categoryID specified above for each object in that
+    category.
+    - Name: This is the name of the category as it should be displayed on the website.
+
+------------------------------------------------------------------------------------------------------------
+
+Some example entries in the file:
+
+{
+
+    "objects": [
+        {
+          "id": "specialCollections",
+          "categoryId": "resource",
+          "name": "Special Collections",
+          "desc": "Includes the Union College Archives, special book collections, manuscripts, and other primary source materials which document the College's history and support and extend its curriculum. The mission of Special Collections is to collect these materials, preserve them, and make them available to anyone with a valid need to use them. Schedule an appointment on their website or via email!",
+          "floor": "floor3"
+        },
+        {
+          "id": "PBK",
+          "name": "Phi Beta Kappa (PBK) Room",
+          "desc": "Used for classes or meetings held in the library.",
+          "floor": "floor2"
+        }
+    ],
+
+    "categories": [
+        {
+          "id": "resource",
+          "name": "Resources"
+        },
+    ]
+}

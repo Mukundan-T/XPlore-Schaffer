@@ -1,3 +1,8 @@
+/**
+ * The main module that controls the map backgrounds. Displays the appropriate map based on the floor
+ * selected, and the routes, positions, modals, and everything related to the maps. 
+ */
+
 import React, { useContext, useState } from "react";
 import { isMobile } from "react-device-detect";
 import { TransformComponent, TransformWrapper } from "react-zoom-pan-pinch";
@@ -111,4 +116,5 @@ function IndoorMapWrapper() {
     </div>
   );
 }
+
 export default IndoorMapWrapper;

@@ -1,3 +1,8 @@
+/**
+ * This module contains functions designed to calculate information related to the route, such as
+ * fictional distances and walking time (mostly unused due to irrelevance in this context).
+ */
+
 import { useContext, useEffect, useState } from "react";
 import { MapDataContext, NavigationContext } from "@/pages/Map";
 import {

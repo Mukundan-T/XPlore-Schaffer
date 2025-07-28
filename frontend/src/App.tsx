@@ -1,3 +1,7 @@
+/**
+ * This is possibly the module that deploys the web application with Vercel Analytics.
+ */
+
 import { Suspense, createContext } from "react";
 import { Route, Routes } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
@@ -7,7 +11,9 @@ import Map from "./pages/Map";
 import { AdminContextType } from "./utils/types";
 import Loading from "./pages/Loading";
 import { Analytics } from "@vercel/analytics/react";
+
 export const AdminContext = createContext<AdminContextType | null>(null);
+
 function App() {
   return (
     <Suspense fallback={<Loading />}>

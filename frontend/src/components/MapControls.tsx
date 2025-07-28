@@ -1,3 +1,7 @@
+/**
+ * Implement the logic for the zooming in and out of the map (found in the bottom right corner).
+ */
+
 import { useControls } from "react-zoom-pan-pinch";
 import { FaPlus, FaMinus, FaExpandAlt } from "react-icons/fa";
 

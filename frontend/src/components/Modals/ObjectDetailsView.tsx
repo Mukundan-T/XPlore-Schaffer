@@ -1,3 +1,8 @@
+/**
+ * This module dictates how the information appears when a zone is clicked on the
+ * website.
+ */
+
 import { ObjectItem } from "@/utils/types";
 import { FiNavigation } from "react-icons/fi";
 import { DialogBody, DialogHeader } from "../ui/Dialog";

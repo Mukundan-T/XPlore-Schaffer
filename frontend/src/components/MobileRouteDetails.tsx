@@ -1,3 +1,8 @@
+/**
+ * Displays a box with the destination name and animation at the bottom of the phone screen
+ * when a route to a place is displayed - for mobile websites.
+ */
+
 import { useRouteDetails } from "@/hooks/useRouteDetails";
 import { FaX } from "react-icons/fa6";
 import { TbRoute } from "react-icons/tb";

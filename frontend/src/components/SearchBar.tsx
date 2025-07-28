@@ -1,3 +1,7 @@
+/**
+ * Implements the search bar at the top of the website.
+ */
+
 import Tooltip from "@/components/ui/Tooltip";
 import {
   navigateToObject,

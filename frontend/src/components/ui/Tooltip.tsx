@@ -1,3 +1,8 @@
+/**
+ * This module defines the small tooltip that appears when hovering over the buttons on the
+ * toolbar (not impactful on touch screen devices).
+ */
+
 import React, { useState, useEffect } from "react";
 
 interface TooltipProps {

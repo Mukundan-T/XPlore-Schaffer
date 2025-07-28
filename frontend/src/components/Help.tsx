@@ -1,3 +1,8 @@
+/**
+ * Handles the logic behind the help button - when clicked, a modal will pop up with information
+ * about the website.
+ */
+
 import { useState } from "react";
 import { BsQuestionCircle } from "react-icons/bs";
 import Tooltip from "./ui/Tooltip";

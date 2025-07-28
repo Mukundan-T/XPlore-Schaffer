@@ -1,3 +1,7 @@
+/**
+ * This module establishes the map background (either the basement, 1st, 2nd, or 3rd floor).
+ */
+
 import floor0 from "@/assets/img/Schaffer_Basement.svg";
 import floor1 from "@/assets/img/Schaffer_1st_Floor.svg";
 import floor2 from "@/assets/img/Schaffer_2nd_Floor.svg";

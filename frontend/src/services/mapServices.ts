@@ -1,3 +1,8 @@
+/**
+ * Utilizes an API to request information related to objects and categories; dysfunctional
+ * due to the nonexistence of an API (all data does from the json file).
+ */
+
 import db from "@/assets/db.json";
 import { Beacon, Category, ObjectItem } from "@/utils/types";
 import apiService from "./apiService";

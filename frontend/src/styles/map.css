@@ -1,3 +1,7 @@
+/*
+This file contains information related to CSS styling of the map, hovering, animations, etc.
+*/
+
 :root {
   --object-opacity: 0.2;
   --object-color: #c1c1c1;

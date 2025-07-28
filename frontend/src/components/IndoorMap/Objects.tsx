@@ -1,3 +1,8 @@
+/**
+ * This module draws the zones on the map background, sets a background shade, and
+ * makes them interactive.
+ */
+
 import React from "react";
 
 interface ObjectsProps {
@@ -6,6 +11,21 @@ interface ObjectsProps {
   currentFloor: string;
 }
 
+/**
+ * This variable zoneData is a list of zones to draw on each floor. Each zone has
+ * four properties:
+ * 
+ * - ID: This is the name of the zone as it should appear on the website.
+ *     ***** This ID MUST match the corresponding "name" in db.json and 
+ *     "objectName" in graphData.ts under vertices that are entered for that
+ *     particular area *****
+ * - d: This is the SVG path determined by the XML coordinates of the particular
+ * zone (usually in the XML editor in an image editor such as Inkscape).
+ * - Floor: This specifies which floor the area is on. 
+ *     ***** MUST be one of the following: floor3, floor2, floor1, floor0 *****
+ * - Type: Specifies whether the zone should be a regular shade ("allowed") or
+ * red stripes ("restricted")
+ */
 const zoneData = [
   /*** FLOOR 3 ***/
   {
@@ -780,6 +800,13 @@ const zoneData = [
   }
 ];
 
+/**
+ * Get the right background shade depending on the zone's type (either restricted or
+ * allowed).
+ * 
+ * @param type the zone's access type ("restricted" or "allowed")
+ * @returns the appropriate background shade
+ */
 function getZoneStyle(type: string) {
   switch (type) {
     case "restricted":
@@ -801,12 +828,14 @@ function Objects({ handleObjectClick, className, currentFloor }: ObjectsProps) {
   return (
     <g id="Objects">
 
+      {/* Define the red diagonal stripes pattern */}
       <defs>
         <pattern id="diagonalStripes" patternUnits="userSpaceOnUse" width="6" height="6" patternTransform="rotate(45)">
           <line x1="0" y="0" x2="0" y2="6" stroke="red" strokeWidth="9" />
         </pattern>
       </defs>
 
+      {/* Render the backgrounds on the appropriate maps */}
       {zoneData
         .filter((zone) => zone.floor === currentFloor)
         .map((zone, index) => (
