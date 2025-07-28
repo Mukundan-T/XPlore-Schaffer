@@ -180,7 +180,7 @@ export const graphData: GraphData = {
     { id: "v142", objectName: null, floor: "floor1", cx: 1004.3766, cy: 887.90918 },
     { id: "v143", objectName: null, floor: "floor1", cx: 1004.3766, cy: 792.2688 },
     { id: "v144", objectName: "Library Service Desk", floor: "floor1", cx: 981.54956, cy: 887.90918 },
-    { id: "v145", objectName: "Information Technology Services (ITS)", floor: "floor1", cx: 981.54956, cy: 792.2688 },
+    { id: "v145", objectName: "Information Technology Services (ITS) Help Desk", floor: "floor1", cx: 981.54956, cy: 792.2688 },
 
     { id: "v146", objectName: "Gateway", floor: "floor1", cx: 1004.3766, cy: 929.30115 },
     { id: "v147", objectName: "Gateway", floor: "floor1", cx: 1004.3766, cy: 724.31384 },

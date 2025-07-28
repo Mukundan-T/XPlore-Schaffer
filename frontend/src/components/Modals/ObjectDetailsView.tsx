@@ -1,5 +1,5 @@
 /**
- * This module dictates how the information appears when a zone is clicked on the
+ * This module dictates how and what information appears when a zone is clicked on the
  * website.
  */
 
@@ -36,6 +36,43 @@ function ObjectDetailsView({
             <FiNavigation />
           </button>
         </div>
+
+        {object.name === "Accommodative Services" && (
+          <><p> Scan this QR Code to learn more! </p>
+          <img
+            src="/images/AccommodativeServices.png"
+            alt="Accommodative Services QR Code"
+            className="block mx-auto w-24 h-auto mt-4 rounded shadow"
+          /></>
+        )}
+
+        {object.name === "Writing Center" && (
+          <><p> Scan this QR Code to learn more! </p>
+          <img
+            src="/images/WritingCenter.png"
+            alt="Writing Center QR Code"
+            className="block mx-auto w-24 h-auto mt-4 rounded shadow"
+          /></>
+        )}
+
+        {object.name === "Special Collections" && (
+          <><p> Scan this QR Code to learn more! </p>
+          <img
+            src="/images/SpecialCollections.png"
+            alt="Special Collections QR Code"
+            className="block mx-auto w-24 h-auto mt-4 rounded shadow" 
+          /></>
+        )}
+
+        {object?.name?.toLowerCase().includes("stacks") && (
+          <><p> Scan this QR Code to go to Primo! </p>
+          <img
+            src="/images/Primo.png"
+            alt="Primo QR Code"
+            className="block mx-auto w-24 h-auto mt-4 rounded shadow"
+          /></>
+        )}
+
       </DialogBody>
     </>
   );

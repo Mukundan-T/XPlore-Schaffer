@@ -11,28 +11,27 @@
       "id": "libAdmin",
       "categoryId": "resource",
       "name": "Library Administration",
-      "desc": "Involves the planning, organizing, staffing, directing, and controlling of library resources and activities to achieve the library's goals and serve its users; Notary services also available.",
+      "desc": "Library Administration involves the planning, organizing, staffing, directing, and controlling of library resources and activities to achieve the library's goals and serve its users. Notary services are also available.",
       "floor": "floor3"
     },
     {
       "id": "specialCollections",
       "categoryId": "resource",
       "name": "Special Collections",
-      "desc": "Includes the Union College Archives, special book collections, manuscripts, and other primary source materials which document the College's history and support and extend its curriculum. The mission of Special Collections is to collect these materials, preserve them, and make them available to anyone with a valid need to use them. Schedule an appointment on their website or via email!",
+      "desc": "Special Collections includes the Union College Archives, special book collections, manuscripts, and other primary source materials which document the College's history and support and extend its curriculum. The mission of Special Collections is to collect these materials, preserve them, and make them available to anyone with a valid need to use them. Schedule an appointment on their website or via email!",
       "floor": "floor3"
     },
     {
       "id": "processingAndDigitization",
       "categoryId": "office",
       "name": "Processing and Digitization",
-      "desc": "TBA",
       "floor": "floor3"
     },
     {
       "id": "quietStudyf3",
       "categoryId": "study space",
       "name": "Quiet Study Floor 3",
-      "desc": "No conversations or cell phone conversations",
+      "desc": "Quiet study - no conversations or cell phone conversations",
       "floor": "floor3"
     },
     {
@@ -54,48 +53,48 @@
       "id": "writingCenter",
       "categoryId": "resource",
       "name": "Writing Center",
-      "desc": "Helps any student with any writing assignment; have student tutors who specialize in different areas of writing. Book an appointment online!",
+      "desc": "The Writing Center helps any student with any writing assignment, with student tutors who specialize in different areas of writing. Book an appointment online!",
       "floor": "floor2"
     },
     {
       "id": "PBK",
       "name": "Phi Beta Kappa (PBK) Room",
-      "desc": "Used for classes or meetings held in the library.",
+      "desc": "The PBK Room is used for classes or meetings held in the library.",
       "floor": "floor2"
     },
     {
       "id": "acomServ",
       "categoryId": "resource",
       "name": "Accommodative Services",
-      "desc": "Aids students with accommodations for testing and classes; Schedule an appointment or reach out via email!",
+      "desc": "Accomodative Services aids students with accommodations for testing and classes. Schedule an appointment or reach out via email!",
       "floor": "floor2"
     },
     {
       "id": "openCollab",
       "categoryId": "study space",
       "name": "Open Collaborative Study Floor 2",
-      "desc": "Conversations allowed, short cell phone conversations",
+      "desc": "Open collaboration - conversations and short cell phone conversations allowed",
       "floor": "floor2"
     },
     {
       "id": "UCPC",
       "categoryId": "resource",
       "name": "Permanent Collection",
-      "desc": "Houses Union's art collection and other materials.",
+      "desc": "The Union College Permanent Collection (UCPC) houses Union's art collection and other materials.",
       "floor": "floor2"
     },
     {
       "id": "learningLab",
       "categoryId": "study space",
       "name": "Learning Lab",
-      "desc": "Open study space as long as no meetings are being held; has desktop computers and large TVs to display content.",
+      "desc": "The Learning Lab is an open study space as long as no meetings are being held. There are desktop computers and large TVs to display content.",
       "floor": "floor2"
     },
     {
       "id": "engagingTechLab",
       "categoryId": "resource",
       "name": "Engaging Tech Lab",
-      "desc": "One-stop shop for all things course technology on campus. Need help with a specific learning platform? Our friendly Digital Innovation Student Liaisons and Learning Experience Designer are here to bridge the gap between you and the resources available.",
+      "desc": "The Engaging Technology Lab (ETL) in Schaffer Library 205 is the one-stop shop for all things course technology on campus. Need help with a specific learning platform? Our friendly Digital Innovation Student Liaisons and Learning Experience Designer are here to bridge the gap between you and the resources available.",
       "floor": "floor2"
     },
     {
@@ -109,35 +108,35 @@
       "id": "quietStudy2",
       "categoryId": "study space",
       "name": "Quiet Study Floor 2",
-      "desc": "No conversations or cell phone conversations",
+      "desc": "Quiet study - no conversations or cell phone conversations",
       "floor": "floor2"
     },
     {
       "id": "groupStudyArea",
       "categoryId": "study space",
       "name": "Group Study Area",
-      "desc": "Light conversations, no cell phone conversations",
+      "desc": "Quiet collaboration - light conversations, but no cell phone conversations",
       "floor": "floor2"
     },
     {
       "id": "regStacks",
       "categoryId": "stacks",
       "name": "Stacks (A-D)",
-      "desc": "Includes general encyclopedias, almanacs, and the subjects of philosophy, psychology, religions, auxiliary sciences of history, and world history.",
+      "desc": "This area includes: (A) encyclopedias, dictionaries and other general reference works, museums - collectors and collecting, newspapers, periodicals, academies and learned societies, yearbooks, almanacs, directories, history of scholarship and learning, & the humanities; (B) philosophy (general), speculative philosophy, psychology, ethics, religions, mythology, & theology; (C) auxiliary sciences of history, the history of civilization, archaeology, & biography; (D) world history.",
       "floor": "floor2"
     },
     {
       "id": "oversizeStacks",
       "categoryId": "stacks",
       "name": "Stacks (Oversized)",
-      "desc": "Has larger books and texts that don't fit with the rest.",
+      "desc": "This area has larger books and texts that don't fit with the rest.",
       "floor": "floor2"
     },
     {
       "id": "quietStudy2a",
       "categoryId": "study space",
       "name": "Additional Quiet Study Floor 2",
-      "desc": "No conversations or cell phone conversations",
+      "desc": "Quiet study - no conversations or cell phone conversations",
       "floor": "floor2"
     },
 
@@ -165,7 +164,7 @@
       "id": "learningCommons",
       "categoryId": "study space",
       "name": "Learning Commons (Open Collaborative Study)",
-      "desc": "Conversations allowed, short cell phone conversations",
+      "desc": "Open Collaboration - conversations allowed, short cell phone conversations",
       "floor": "floor1"
     },
     {
@@ -179,14 +178,14 @@
       "id": "libraryServDesk",
       "categoryId": "resource",
       "name": "Library Service Desk",
-      "desc": "Central location where users can receive assistance with various services and resources.",
+      "desc": "The Library Service Desk is the central location where users can receive assistance with various services and resources.",
       "floor": "floor1"
     },
     {
       "id": "its",
       "categoryId": "resource",
-      "name": "Information Technology Services (ITS)",
-      "desc": "Serves as the initial point of contact for technical support; provides assistance with IT-related issues and requests, often acting as a triage point before escalating complex problems to specialized IT support teams.",
+      "name": "Information Technology Services (ITS) Help Desk",
+      "desc": "The ITS Help Desk Serves as the initial point of contact for technical support. It provides assistance with IT-related issues and requests, often acting as a triage point before escalating complex problems to specialized IT support teams.",
       "floor": "floor1"
     },
     {
@@ -200,42 +199,42 @@
       "id": "accessServ",
       "categoryId": "office",
       "name": "Access Services",
-      "desc": "Department focusing on facilitating patron access to library materials and resources; includes managing circulation, interlibrary loan, course reserves, and other related functions that enable users to borrow, return, and access library materials.",
+      "desc": "Access Services focuses on facilitating patron access to library materials and resources; includes managing circulation, interlibrary loan, course reserves, and other related functions that enable users to borrow, return, and access library materials.",
       "floor": "floor1"
     },
     {
       "id": "cdls",
       "categoryId": "office",
       "name": "Content & Digital Library Systems (CDLS)",
-      "desc": "Provides access to the highest quality information possible in the best formats possible; responsible for selecting, acquiring, managing, digitizing, and providing the systems needed to ensure availability of a wide variety of materials.",
+      "desc": "CDLS provides access to the highest quality information possible in the best formats possible. We are responsible for selecting, acquiring, managing, digitizing, and providing the systems needed to ensure availability of a wide variety of materials.",
       "floor": "floor1"
     },
     {
       "id": "printers",
       "categoryId": "resource",
       "name": "Printers/Copiers",
-      "desc": "TBA",
+      "desc": "Ask the ITS Help Desk for any printer help!",
       "floor": "floor1"
     },
     {
       "id": "bloomberg",
       "categoryId": "resource",
       "name": "Bloomberg",
-      "desc": "A computer system for real-time financial data analysis, trading, and news. There is free access to the Bloomberg Market Concepts course and certification.",
+      "desc": "The Bloomberg Terminal is a computer system for real-time financial data analysis, trading, and news. There is free access to the Bloomberg Market Concepts course and certification.",
       "floor": "floor1"
     },
     {
       "id": "currentReadingArea",
       "categoryId": "resource",
       "name": "Current Reading Area",
-      "desc": "Contains a selection of new and popular titles, as well as the most recent issues of some popular magazines and newspapers.",
+      "desc": "The Current Reading Area contains a selection of new and popular titles, as well as the most recent issues of some popular magazines and newspapers.",
       "floor": "floor1"
     },
     {
       "id": "quietStudy1",
       "categoryId": "study space",
       "name": "Quiet Study Floor 1",
-      "desc": "No conversations or cell phone conversations",
+      "desc": "Quiet study - no conversations or cell phone conversations",
       "floor": "floor1"
     },
     {
@@ -256,7 +255,7 @@
       "id": "lallyReadingRoom",
       "categoryId": "study space",
       "name": "Lally Reading Room (Quiet Study)",
-      "desc": "No conversations or cell phone conversations",
+      "desc": "Quiet study - no conversations or cell phone conversations",
       "floor": "floor1"
     },
     {
@@ -285,7 +284,7 @@
       "id": "ideaLab",
       "categoryId": "study space",
       "name": "Study Rooms",
-      "desc": "TBA",
+      "desc": "These study rooms can be used for open group collaboration or quiet study and feature whiteboards.",
       "floor": "floor0"
     },
     {
@@ -299,49 +298,49 @@
       "id": "law",
       "categoryId": "stacks",
       "name": "Stacks (K)",
-      "desc": "Law section",
+      "desc": "This area is the law section, including: general law, religious law, & law based on country.",
       "floor": "floor0"
     },
     {
       "id": "poliSci",
       "categoryId": "stacks",
       "name": "Stacks (J)",
-      "desc": "Political Science section",
+      "desc": "This area is the political science section, including: general legislative and executive papers, political science, political theory, political institutions and public administration, local government, municipal government, Colonies and colonization, emigration and immigration, & international law and international relations.",
       "floor": "floor0"
     },
     {
       "id": "socialSci",
       "categoryId": "stacks",
       "name": "Stacks (H)",
-      "desc": "Social Sciences section",
+      "desc": "This area is the social sciences section, including: statistics, economy, industries, transportation and communications, commerce, finance, public finance, sociology, social history and problems, the family, marriage, women, communities, social pathology, socialism, communism, & anarchism.",
       "floor": "floor0"
     },
     {
       "id": "geoAnthroRec",
       "categoryId": "stacks",
       "name": "Stacks (G)",
-      "desc": "Geography, Anthropology, Dance, and Sports section",
+      "desc": "This area has the following: geography, oceanography, environmental studies, human ecology, anthropology, & recreation/leisure (dance/sports).",
       "floor": "floor0"
     },
     {
       "id": "americaUS",
       "categoryId": "stacks",
       "name": "Stacks (E)",
-      "desc": "History of the Americas section",
+      "desc": "This area holds the history of the Americas books, specifically America and the United States.",
       "floor": "floor0"
     },
     {
       "id": "americaOther",
       "categoryId": "stacks",
       "name": "Stacks (F)",
-      "desc": "History of the Americas section",
+      "desc": "This area holds the history of the Americas books, specifically United States local history, British America, French America, & Latin America.",
       "floor": "floor0"
     },
     {
       "id": "groupStudyRooms",
       "categoryId": "study space",
       "name": "Group Study Rooms",
-      "desc": "Open collaboration; conversations allowed, short cell phone conversations",
+      "desc": "These study rooms can be used for open group collaboration or quiet study and feature whiteboards.",
       "floor": "floor0"
     },
     {
@@ -362,28 +361,28 @@
       "id": "LtoP",
       "categoryId": "stacks",
       "name": "Stacks (L-P)",
-      "desc": "Includes education, music, fine arts, language, and literature.",
+      "desc": "This area includes: (L) education, history of education, individual institutions across the world, school magazines and college papers, student fraternities and societies in the US, & textbooks; (M) music, literature on music, & instruction and study; (N) visual arts, architecture, sculpture, drawing, design, illustration, painting, print media, decorative arts, & general arts; (P) philology, linguistics, languages and literature, & fiction.",
       "floor": "floor0"
     },
     {
       "id": "PtoQ",
       "categoryId": "stacks",
       "name": "Stacks (P-Q)",
-      "desc": "Includes language and literature, and the sciences.",
+      "desc": "This area includes: (P) language and literature; (Q) general Science, math, astronomy, physics, chemistry, geology, natural history, biology, botany, zoology, human anatomy, physiology, & microbiology.",
       "floor": "floor0"
     },
     {
       "id": "QtoT",
       "categoryId": "stacks",
       "name": "Stacks (Q-T)",
-      "desc": "Includes sciences, medicine, agriculture, and technology.",
+      "desc": "This area includes: (Q) sciences; (R) medicine, pathology, internal medicine, surgery, gynecology, pediatrics, dentistry, dermatology, therapeutics, nursing, pharmacy, & homeopathy; (S) agriculture, forestry, animal culture, aquaculture, & hunting sports; (T) technology, engineering, building construction, motor vehicles, chemical technology, photography, arts and crafts, & home economics.",
       "floor": "floor0"
     },
     {
       "id": "TtoZ",
       "categoryId": "stacks",
       "name": "Stacks (T-Z)",
-      "desc": "Includes technology, photography, military science, naval science, and bibliography (industry and trade, information resources, libraries, paleography, and writing).",
+      "desc": "This area includes: (T) technology, photography, manufactures, & home economics; (U) military science, armies, military administration, infantry, cavalry, artillery, & air forces; (V) naval science, navies, marine navigation, & naval architecture; (Z) books in general, writing paleography, book industries and trade, libraries, bibliography, & information resources.",
       "floor": "floor0"
     },
     {
@@ -439,7 +438,7 @@
       "id": "quietStudy0",
       "categoryId": "study space",
       "name": "Quiet Study Basement",
-      "desc": "No conversations or cell phone conversations",
+      "desc": "Quiet study - no conversations or cell phone conversations",
       "floor": "floor0"
     }
   ],

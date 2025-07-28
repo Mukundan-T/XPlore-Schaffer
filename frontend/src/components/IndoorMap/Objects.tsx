@@ -363,7 +363,7 @@ const zoneData = [
     type: "allowed"
   },
   {
-    id: "Information Technology Services (ITS)",
+    id: "Information Technology Services (ITS) Help Desk",
     d: `m 861.87488,754.83966
         h 107.54368
         v 83.64508

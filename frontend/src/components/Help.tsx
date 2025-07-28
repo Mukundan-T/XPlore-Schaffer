@@ -36,7 +36,7 @@ function Help() {
 
             <li className="flex items-center list-disc gap-3">
               <img
-                src="/images/Edit_Position.png"
+                src="/images/EditPosition.png"
                 alt="Edit position button"
                 className="w-10 h-10 rounded border"
                 draggable={false}
@@ -47,12 +47,12 @@ function Help() {
 
             <li className="flex items-center gap-3">
               <img
-                src="/images/Reset_Position.png"
+                src="/images/ResetPosition.png"
                 alt="Reset position button"
                 className="w-10 h-10 rounded border"
                 draggable={false}
               />
-              <span><strong> Reset Position:</strong> Reset your start location to here.</span>
+              <span><strong> Reset Position:</strong> Reset your start location to the current location.</span>
             </li>
 
           </ul>
