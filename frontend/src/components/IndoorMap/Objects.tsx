@@ -413,7 +413,7 @@ const zoneData = [
     type: "allowed"
   },
   {
-    id: "Bloomberg",
+    id: "Bloomberg Terminal",
     d: `m 1232.4302,661.66057 -4.9577,44.87343 7.6908,4.00429 9.4646,4.38231 
           8.5393,3.82022 13.573,6.29213 11.5057,4.94381 11.3707,3.14607 
           -0.2365,-71.46226
@@ -740,7 +740,7 @@ const zoneData = [
     type: "allowed"
   },
   {
-    id: "Periodicals (Classified)",
+    id: "Periodicals (Classed)",
     d: `m 1372.5,528.75
         h 82.5
         v 63.125

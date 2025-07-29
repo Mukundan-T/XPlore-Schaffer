@@ -217,9 +217,9 @@
       "floor": "floor1"
     },
     {
-      "id": "bloomberg",
+      "id": "bloomberg Terminal",
       "categoryId": "resource",
-      "name": "Bloomberg",
+      "name": "Bloomberg Terminal",
       "desc": "The Bloomberg Terminal is a computer system for real-time financial data analysis, trading, and news. There is free access to the Bloomberg Market Concepts course and certification.",
       "floor": "floor1"
     },
@@ -402,7 +402,7 @@
     {
       "id": "classifiedPeriodicals",
       "categoryId": "periodicals",
-      "name": "Periodicals (Classified)",
+      "name": "Periodicals (Classed)",
       "desc": "TBA",
       "floor": "floor0"
     },

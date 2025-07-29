@@ -79,7 +79,7 @@ function SearchBar() {
         obj.name.toLowerCase().includes(value.trim().toLowerCase())
       );
       const filteredDescs = objects.filter((obj) =>
-        obj.desc.toLowerCase().includes(value.trim().toLowerCase())
+        obj.desc?.toLowerCase().includes(value.trim().toLowerCase())
       );
       const allSuggestions: ObjectItem[] = filteredNames.concat(filteredDescs);
       const filteredSuggestions = removeDuplicates(allSuggestions, "name");
