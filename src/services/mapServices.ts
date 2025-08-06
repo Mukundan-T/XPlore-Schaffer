@@ -1,6 +1,6 @@
 /**
  * Utilizes an API to request information related to objects and categories; dysfunctional
- * due to the nonexistence of an API (all data does from the json file).
+ * due to the nonexistence of an API (all data comes from the json file).
  */
 
 import db from "@/assets/db.json";
@@ -11,26 +11,13 @@ export async function getObjects(): Promise<ObjectItem[]> {
   try {
     const response = await apiService.get("/objects");
     return response.data as ObjectItem[];
-  } catch (error) {
+  } 
+  catch (error) {
     console.error(
       "Error fetching objects from API, falling back to local db.json:",
       error
     );
     return db.objects as ObjectItem[];
-  }
-}
-
-export async function getObjectById(id: string): Promise<ObjectItem> {
-  try {
-    const response = await apiService.get(`/objects/${id}`);
-    return response.data[0] as ObjectItem;
-  } catch (error) {
-    console.error(`Error fetching object with ID ${id}:`, error);
-    const object = db.objects.find((obj) => obj.id === id);
-    if (!object) {
-      throw new Error(`Object with ID ${id} not found in local db.json`);
-    }
-    return object;
   }
 }
 
@@ -93,10 +80,6 @@ export async function updateCategory(
     throw error;
   }
 }
-
-/* export function logClick(id: string) {
-  return apiService.post("/clicks", { id });
-} */
 
 export async function getBeacon(): Promise<Beacon[]> {
   try {

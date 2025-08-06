@@ -14,9 +14,9 @@ import {
 import { MapDataContext, NavigationContext } from "../pages/Map";
 import { navigateToObject } from "@/utils/navigationHelper";
 import { useFloor } from "@/context/FloorContext";
-// import apiService from "@/services/apiService";
-// import { getCurrentLocation } from "@/store/currentLocation";
 import { toast } from "react-toastify";
+// Uncomment when GA4 ID is generated
+// import { trackEvent } from "@/store/analytics";
 
 interface ParsedObjects {
   [key: string]: {
@@ -59,16 +59,10 @@ function Sidebar() {
     setIsEditMode(false);
     if (!object) return;
     console.log(object);
-    /* try {
-      // Log search to the backend
-      await apiService.post("/searches", {
-        query: object.name,
-        userLocation: getCurrentLocation()
-      });
-    }
-    catch (err) {
-      console.error("Error logging search:", err);
-    } */
+    // Uncomment when GA4 ID is generated
+    /* trackEvent("Search", {
+      room_name: object.name,
+    }); */
     toast.dismiss();
     navigateToObject(object.name, navigation, setNavigation, setCurrentFloor, currentFloor);
   }

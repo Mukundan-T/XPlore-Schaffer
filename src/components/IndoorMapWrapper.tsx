@@ -19,9 +19,8 @@ import ObjectDetailsModal from "./Modals/ObjectDetailsModal";
 import { navigateToObject } from "@/utils/navigationHelper";
 import { toast } from "react-toastify";
 import { useFloor } from "@/context/FloorContext";
-// import apiService from "@/services/apiService";
-// import { logClick } from "@/services/mapServices";
-// import { getCurrentLocation } from "@/store/currentLocation";
+// Uncomment when GA4 ID is generated
+// import { trackEvent } from "@/store/analytics";
 
 function IndoorMapWrapper() {
   const [modalOpen, setModalOpen] = useState(false);
@@ -39,7 +38,10 @@ function IndoorMapWrapper() {
       const selectedObject = objects.find((obj) => obj.name === targetId);
       if (selectedObject?.id) {
         setObject(selectedObject);
-        // logClick(targetId);
+        // Uncomment when GA4 ID is generated
+        /* trackEvent("Room Click", {
+          zone_name: targetId,
+        }); */
         setModalOpen(true);
       } else {
         toast.error("Object not found");
@@ -57,19 +59,14 @@ function IndoorMapWrapper() {
 
   async function handleNavigationClick() {
     setModalOpen(false);
-    /* try {
-      // Log search to the backend
-        await apiService.post("/searches", {
-          query: object.name,
-          userLocation: getCurrentLocation()
-        });
-      }
-      catch (err) {
-        console.error("Error logging search:", err);
-      } */
+    // Uncomment when GA4 ID is generated
+    /* trackEvent("Search", {
+      room_name: object.name,
+    }); */
     toast.dismiss();
     navigateToObject(object.name, navigation, setNavigation, setCurrentFloor, currentFloor);
   }
+
   return (
     <div className="relative w-full h-full bg-white center">
       <ObjectDetailsModal
@@ -89,15 +86,17 @@ function IndoorMapWrapper() {
       >
         <TransformComponent wrapperClass="bg-white">
           <MapBackground>
+          
             {/*Objects are the clickable areas on the map e.g. Rooms, Desks, ...*/}
             <Objects
               handleObjectClick={handleObjectClick}
               className={isEditMode ? "" : "hover:cursor-pointer hover:opacity-50"}
               currentFloor={currentFloor}
-              
             />
+
             {/*Edges are the lines on the map aka the paths*/}
             <Paths />
+
             {/*Vertexes are the circles on the map aka the positions*/}
             <Positions
               positionRadius={positionRadius}

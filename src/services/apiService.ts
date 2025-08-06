@@ -5,7 +5,7 @@
 import axios from "axios";
 
 export const API_BASE_URL = import.meta.env.PROD
-  ? "/" // Or the correct backend URL
+  ? "/" // The correct backend URL
   : "http://localhost:8080";
 
 // Create an Axios instance

@@ -23,7 +23,7 @@ This file contains information related to CSS styling of the map, hovering, anim
 
 .position {
   fill: var(--position-color);
-  transition: fill 0.3s ease; /* Füge eine sanfte Übergangseffekt hinzu */
+  transition: fill 0.3s ease; /* Add a smooth transition effect */
 }
 
 .position-active {

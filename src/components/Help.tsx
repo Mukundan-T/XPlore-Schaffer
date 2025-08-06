@@ -19,7 +19,7 @@ function Help() {
         onClick={toggle}
         className="ml-1 h-12 w-12 bg-green-500 center rounded text-white"
       >
-        <BsQuestionCircle />
+        <BsQuestionCircle size={22}/>
       </button>
     </Tooltip>
 
@@ -27,13 +27,6 @@ function Help() {
         <DialogHeader>Web Guide</DialogHeader>
         <DialogBody>
           <ul className="text-md text-gray-700 list-disc ml-4 space-y-2">
-            {/* <li><strong>Select Floor:</strong> Switch between library floors.</li>
-
-            <li><strong>Search:</strong> Search a place in the library to find the best route from your
-            start location (indicated by the blue dot).</li>
-
-            <li><strong>Avoid Stairs:</strong> Route will avoid stairs in multi-floor routes.</li> */}
-
             <li className="flex items-center list-disc gap-3">
               <img
                 src="/images/EditPosition.png"
@@ -44,7 +37,6 @@ function Help() {
               <span><strong> Edit Position:</strong> Change your starting location on the map, even to a spot 
             on a different floor.</span>
             </li>
-
             <li className="flex items-center gap-3">
               <img
                 src="/images/ResetPosition.png"
@@ -54,7 +46,6 @@ function Help() {
               />
               <span><strong> Reset Position:</strong> Reset your start location to the current location.</span>
             </li>
-
           </ul>
         </DialogBody>
       </Dialog>

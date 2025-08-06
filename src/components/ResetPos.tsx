@@ -33,7 +33,7 @@ function ResetPos() {
         onClick={resetToDefaultPosition}
         aria-label="reset position"
       >
-        <MdMyLocation size={20} />
+        <MdMyLocation size={22} />
       </button>
     </Tooltip>
   );

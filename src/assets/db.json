@@ -171,7 +171,6 @@
       "id": "newspapers",
       "categoryId": "resource",
       "name": "Newspapers",
-      "desc": "TBA",
       "floor": "floor1"
     },
     {
@@ -241,14 +240,13 @@
       "id": "refJX-Z",
       "categoryId": "resource",
       "name": "Reference JX-Z",
-      "desc": "TBA",
+      "desc": "This area has dictionaries, encyclopedias, almanacs, and more.",
       "floor": "floor1"
     },
     {
       "id": "CDs",
       "categoryId": "resource",
       "name": "CDs",
-      "desc": "TBA",
       "floor": "floor1"
     },
     {
@@ -262,21 +260,20 @@
       "id": "currentPeriodicals",
       "categoryId": "periodicals",
       "name": "Periodicals (Current)",
-      "desc": "TBA",
+      "desc": "This area has current magazines, newspapers, journals, and more.",
       "floor": "floor1"
     },
     {
       "id": "refA-JX",
       "categoryId": "resource",
       "name": "Reference A-JX",
-      "desc": "TBA",
+      "desc": "This area has dictionaries, encyclopedias, almanacs, and more.",
       "floor": "floor1"
     },
     {
       "id": "atlases",
       "categoryId": "resource",
       "name": "Atlases",
-      "desc": "TBA",
       "floor": "floor1"
     },
 
@@ -291,7 +288,6 @@
       "id": "filmEditRoom",
       "categoryId": "resource",
       "name": "Film Editing Room",
-      "desc": "TBA",
       "floor": "floor0"
     },
     {
@@ -354,7 +350,6 @@
       "id": "microformsAndReader",
       "categoryId": "resource",
       "name": "Microfilm & Microfilm Reader",
-      "desc": "TBA",
       "floor": "floor0"
     },
     {
@@ -389,28 +384,28 @@
       "id": "AtoI",
       "categoryId": "periodicals",
       "name": "Periodicals (A-I)",
-      "desc": "TBA",
+      "desc": "This area has magazines, newspapers, journals, and more organized alphabetically from A to I.",
       "floor": "floor0"
     },
     {
       "id": "JtoZ",
       "categoryId": "periodicals",
       "name": "Periodicals (J-Z)",
-      "desc": "TBA",
+      "desc": "This area has magazines, newspapers, journals, and more organized alphabetically from J to Z.",
       "floor": "floor0"
     },
     {
       "id": "classifiedPeriodicals",
       "categoryId": "periodicals",
       "name": "Periodicals (Classed)",
-      "desc": "TBA",
+      "desc": "This area has magazines, newspapers, journals, and more which are organized by the Library of Congress classifications (and not alphabetical by title).",
       "floor": "floor0"
     },
     {
       "id": "oversizedPeriodicals",
       "categoryId": "periodicals",
       "name": "Periodicals (Oversized)",
-      "desc": "TBA",
+      "desc": "This area has oversized magazines, newspapers, journals, and more.",
       "floor": "floor0"
     },
     {
@@ -424,14 +419,12 @@
       "id": "map",
       "categoryId": "resource",
       "name": "Map Collection",
-      "desc": "TBA",
       "floor": "floor0"
     },
     {
       "id": "dvd",
       "categoryId": "resource",
       "name": "DVD Collection",
-      "desc": "TBA",
       "floor": "floor0"
     },
     {

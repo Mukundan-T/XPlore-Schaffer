@@ -17,9 +17,9 @@ import {
   ObjectItem,
 } from "../utils/types";
 import { useFloor } from "@/context/FloorContext";
-// import apiService from "@/services/apiService";
-// import { getCurrentLocation } from "@/store/currentLocation";
 import { toast } from "react-toastify";
+// Uncomment when GA4 ID is generated
+// import { trackEvent } from "@/store/analytics";
 
 function SearchBar() {
   const [inputValue, setInputValue] = useState<string>("");
@@ -155,23 +155,17 @@ function SearchBar() {
       (obj) => obj.name.toLowerCase() === inputValue.trim().toLowerCase()
     );
     if (matchingObject) {
-      // Could be place to increment a counter for user clicks - search bar
-      /* try {
-      // Log search to the backend
-        await apiService.post("/searches", {
-          query: matchingObject.name,
-          userLocation: getCurrentLocation()
-        });
-      }
-      catch (err) {
-        console.error("Error logging search:", err);
-      } */
+      // Uncomment when GA4 ID is generated
+      /* trackEvent("Search", {
+        room_name: matchingObject.name,
+      }); */
       toast.dismiss();
       navigateToObject(matchingObject.name, navigation, setNavigation, setCurrentFloor, currentFloor);
+      // Could be place to increment a counter for user clicks - search bar
       setSelectedIndex(-1);
     }
     else {
-      //? To test the navigation feature
+      // To test the navigation feature
       if (inputValue === "Test") {
         const delay = 500;
         navigationTestAll(objects, 0, delay, navigation, setNavigation, setCurrentFloor, currentFloor);
@@ -245,7 +239,7 @@ function SearchBar() {
               onClick={() => handleSearch(inputValue)}
               aria-label="search"
             >
-              <FiNavigation size={20}/>
+              <FiNavigation size={22}/>
             </button>
           </Tooltip>
         </div>

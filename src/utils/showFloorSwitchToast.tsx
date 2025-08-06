@@ -25,7 +25,7 @@ export function showFloorSwitchToast(
       <span> Continue on {formatFloorLabel(nextFloor)}</span>
       <button
         onClick={() => {
-          setCurrentFloor(nextFloor)
+          setCurrentFloor(nextFloor);
           toast.dismiss();
         }}
         className="mt-1 text-xs bg-blue-600 hover:bg-blue-700 text-white px-3 py-1 rounded"
