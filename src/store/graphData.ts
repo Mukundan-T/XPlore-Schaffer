@@ -128,6 +128,7 @@ export const graphData: GraphData = {
     { id: "v65", objectName: null, floor: "floor2", cx: 1133.2638, cy: 704.50562 },
     { id: "v66", objectName: "Gateway", floor: "floor2", cx: 1133.2638, cy: 707.604 },
     { id: "v67", objectName: "Permanent Collection", floor: "floor2", cx: 1250.6671, cy: 707.604 },
+    { id: "v68", objectName: null, floor: "floor2", cx: 1109.3402, cy: 473.36188 }, // default
     { id: "v71", objectName: "Learning Lab", floor: "floor2", cx: 1119.4171, cy: 1016.9302 },
     { id: "v72", objectName: "Engaging Tech Lab", floor: "floor2", cx: 1148.0519, cy: 978.76782 },
     
@@ -435,6 +436,7 @@ export const graphData: GraphData = {
     { id: "v94_to_v93", from: "v94", to: "v93", floor: "floor2" },
     { id: "v65_to_v66", from: "v65", to: "v66", floor: "floor2" },
     { id: "v66_to_v67", from: "v66", to: "v67", floor: "floor2" },
+    { id: "v68_to_v96", from: "v68", to: "v96", floor: "floor2" },
     { id: "v76_to_v77", from: "v76", to: "v77", floor: "floor2" },
 
     { id: "v76_to_v72", from: "v76", to: "v72", floor: "floor2" },
