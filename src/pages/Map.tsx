@@ -19,6 +19,8 @@ import Sidebar from "@/components/Sidebar";
 import { FloorProvider } from "@/context/FloorContext";
 import { setDefaultLocation } from "@/store/defaultPosition";
 import { setCurrentLocation } from "@/store/currentLocation";
+import { useFloor } from "@/context/FloorContext";
+import { graphData } from "@/store/graphData";
 
 export const NavigationContext = createContext<NavigationContextType | null>(
   null
@@ -27,10 +29,15 @@ export const NavigationContext = createContext<NavigationContextType | null>(
 export const MapDataContext = createContext<MapDataContextType | null>(null);
 
 function Map() {
+  const { currentFloor, setCurrentFloor } = useFloor();
   let [searchParams, setSearchParams] = useSearchParams();
   const defaultPosition = "v199";
   const startPosition = searchParams.get("position") || defaultPosition;
+  let currentVertex = graphData.vertices.find((v) => v.id === startPosition);
+  let newStartFloor = currentVertex?.floor || currentFloor;
+
   setCurrentLocation(startPosition);
+
   const [navigation, setNavigation] = useState<Navigation>({
     start: startPosition,
     end: "",
@@ -47,6 +54,10 @@ function Map() {
 
   useEffect(() => {
     setDefaultLocation(startPosition);
+  }, []);
+
+  useEffect(() => {
+    setCurrentFloor(newStartFloor);
   }, []);
 
   useEffect(() => {

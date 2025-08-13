@@ -9,13 +9,20 @@ import { NavigationContextType } from "@/utils/types";
 import { useContext } from "react";
 import { resetEdges } from "@/utils/navigationHelper";
 import { getDefaultLocation } from "@/store/defaultPosition";
+import { useFloor } from "@/context/FloorContext";
+import { graphData } from "@/store/graphData";
 
 function ResetPos() {
     const { setNavigation } = useContext(NavigationContext) as NavigationContextType;
+    const { currentFloor, setCurrentFloor } = useFloor();
     
     function resetToDefaultPosition() {
       const defaultStart = "v199";
       const startPos = getDefaultLocation();
+      let currentVertex = graphData.vertices.find((v) => v.id === startPos);
+      let newStartFloor = currentVertex?.floor || currentFloor;
+
+      setCurrentFloor(newStartFloor)
       resetEdges(setNavigation);
       setNavigation({
       start: startPos || defaultStart,
