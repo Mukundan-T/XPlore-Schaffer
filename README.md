@@ -56,7 +56,7 @@ To edit the program and update the repository on GitHub:
 3. Commit all of the staged changes in your local repository, adding a short message within double quotes to document the software change:
 
    ```bash
-   git commit -m `"Add message"`
+   git commit -m "Add message"
    ```
 
 4. Push all of the local changes to the GitHub repository:
