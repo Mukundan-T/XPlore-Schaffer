@@ -40,3 +40,43 @@ Follow these instructions to get the project running:
    ```
 
 After running these commands, your default web browser should automatically open and navigate to the running application.
+
+## Contributing to the Repository
+
+To edit the program and update the repository on GitHub:
+
+1. Make the desired software edits after cloning the repository on your local machine.
+
+2. Stage all of the changes made in your local repository using this command:
+
+   ```bash
+   git add .
+   ```
+
+3. Commit all of the staged changes in your local repository, adding a short message within double quotes to document the software change:
+
+   ```bash
+   git commit -m `"Add message"`
+   ```
+
+4. Push all of the local changes to the GitHub repository:
+
+   ```bash
+   git push
+   ```
+
+## Re-deploying After Software Edits
+
+1. Delete the **dist** folder locally on your machine.
+
+2. Re-compile the program:
+
+   ```bash
+   npm run build
+   ```
+
+You should see a newly generated **dist** folder.
+
+3. Push all of the local edits to GitHub (see the previous section for how to do so).
+
+4. Log in to Reclaim Hosting and upload the **contents** of the dist folder, not the folder itself.
