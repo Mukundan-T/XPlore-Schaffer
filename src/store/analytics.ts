@@ -8,6 +8,7 @@ export function trackEvent(eventName: string, params?: Record<string, any>) {
   // guard: only run if GA is available
   // @ts-ignore
   if (typeof window !== 'undefined' && typeof window.gtag === 'function') {
+    eventName = "XPloreSchaffer-" + eventName;
     // @ts-ignore
     window.gtag('event', eventName, params || {});
   }
