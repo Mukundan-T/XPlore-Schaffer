@@ -452,7 +452,7 @@ const zoneData = [
     type: "allowed"
   },
   {
-    id: "CDs",
+    id: "DVD Collection",
     d: `m 1196.017,326.69888
         h 292.0519
         v 34.53786
@@ -504,7 +504,7 @@ const zoneData = [
     type: "allowed"
   },
   {
-    id: "Periodicals (Current)",
+    id: "CDs",
     d: `M 607.63452,331.52945
         H 878.035
         v 32.03429
@@ -680,6 +680,16 @@ const zoneData = [
     type: "allowed"
   },
   {
+    id: "Microforms",
+    d: `m 650.40349,436.403494
+        h 18.43952
+        v 159.45497
+        h -18.43952
+        z`,
+    floor: "floor0",
+    type: "allowed"
+  },
+  {
     id: "Stacks (L-P)",
     d: `m 678.46893,531.74432
         h 286.02469
@@ -751,10 +761,10 @@ const zoneData = [
   },
   {
     id: "Periodicals (Oversized)",
-    d: `m 1407.125,431.125
-        h 47.75
+    d: `m 1365.4231,431.125
+        h 89.4519
         v 62.5
-        h -47.75
+        h -89.4519
         z`,
     floor: "floor0",
     type: "allowed"
@@ -776,16 +786,6 @@ const zoneData = [
         v 59.57375
         h -105.7124
         z`,
-    floor: "floor0",
-    type: "allowed"
-  },
-  {
-    id: "DVD Collection",
-    d: `m 1365.5,431
-        h 41.625
-        v 63.125
-        H 1365.5
-        Z`,
     floor: "floor0",
     type: "allowed"
   },

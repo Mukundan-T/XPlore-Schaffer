@@ -276,6 +276,12 @@
       "name": "Atlases",
       "floor": "floor1"
     },
+    {
+      "id": "dvd",
+      "categoryId": "resource",
+      "name": "DVD Collection",
+      "floor": "floor1"
+    },
 
     {
       "id": "ideaLab",
@@ -353,6 +359,12 @@
       "floor": "floor0"
     },
     {
+      "id": "generalMicroforms",
+      "categoryId": "resource",
+      "name": "Microforms",
+      "floor": "floor0"
+    },
+    {
       "id": "LtoP",
       "categoryId": "stacks",
       "name": "Stacks (L-P)",
@@ -419,12 +431,6 @@
       "id": "map",
       "categoryId": "resource",
       "name": "Map Collection",
-      "floor": "floor0"
-    },
-    {
-      "id": "dvd",
-      "categoryId": "resource",
-      "name": "DVD Collection",
       "floor": "floor0"
     },
     {
